@@ -1,0 +1,353 @@
+:root{
+  --bg:#0b0c0f;
+  --card:#121420;
+  --text:#e9ecf1;
+  --muted:#9aa3b2;
+  --line:#23273a;
+  --accent:#c9ff5a;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Noto Sans JP", sans-serif;
+  background:linear-gradient(180deg, #07080b 0%, #0b0c0f 60%);
+  color:var(--text);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.top{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(11,12,15,.85);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid var(--line);
+  padding:18px 18px 14px;
+}
+
+.brand h1{
+  margin:0;
+  font-size:20px;
+  letter-spacing:.3px;
+}
+
+.sub{
+  margin:6px 0 0;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.controls{
+  margin-top:12px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+/* 検索 */
+input[type="search"]{
+  background:var(--card);
+  border:1px solid var(--line);
+  color:var(--text);
+  padding:10px 12px;
+  border-radius:12px;
+  outline:none;
+  min-width:260px;
+  flex:1;
+}
+
+select{
+  background:var(--card);
+  border:1px solid var(--line);
+  color:var(--text);
+  padding:10px 12px;
+  border-radius:12px;
+  outline:none;
+  min-width:160px;
+}
+
+.chip{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  background:var(--card);
+  border:1px solid var(--line);
+  padding:8px 10px;
+  border-radius:999px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn{
+  background:#0f1120;
+  border:1px solid var(--line);
+  color:var(--text);
+  padding:8px 10px;
+  border-radius:12px;
+  cursor:pointer;
+}
+
+/* ★BGMボタンの見た目（ON/OFFが分かる） */
+#bgmToggle{
+  white-space:nowrap;
+}
+
+#bgmToggle.on{
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(201,255,90,.25) inset;
+}
+
+/* ★Storyボタンの見た目（ON/OFFが分かる） */
+#storyToggle{
+  white-space:nowrap;
+}
+
+#storyToggle.on{
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(201,255,90,.25) inset;
+}
+
+/* =========================
+   GRID
+========================= */
+
+main{
+  padding:18px;
+}
+
+.meta{
+  color:var(--muted);
+  font-size:12px;
+  margin:8px 0 14px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap:12px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  cursor:pointer;
+  transition: transform .08s ease, border-color .12s ease;
+}
+
+.card:hover{
+  transform: translateY(-1px);
+  border-color:#3a4166;
+}
+
+.thumb{
+  width:100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display:block;
+}
+
+.cardBody{
+  padding:10px 10px 12px;
+}
+
+.titleRow{
+  display:flex;
+  justify-content:space-between;
+  gap:8px;
+  align-items:flex-start;
+}
+
+.title{
+  margin:0;
+  font-size:13px;
+  line-height:1.3;
+}
+
+.small{
+  color:var(--muted);
+  font-size:11px;
+  margin-top:6px;
+}
+
+.tags{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+
+.tag{
+  font-size:11px;
+  padding:4px 8px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  color:var(--muted);
+}
+
+/* =========================
+   MODAL FULLSCREEN IMAGE
+========================= */
+
+/* ★重要：dialogを閉じている時は必ず非表示（トップに出るバグ対策） */
+.modal:not([open]){
+  display:none;
+}
+
+/* ★開いている時だけflexレイアウトを適用 */
+.modal[open]{
+  display:flex;
+  flex-direction:column;
+}
+
+.modal{
+  width:98vw;
+  max-width:1600px;
+  height:92vh;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:0;
+  color:var(--text);
+}
+
+.modal::backdrop{
+  background:rgba(0,0,0,.75);
+}
+
+.modalHead{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  padding:14px 18px 12px;
+  border-bottom:1px solid var(--line);
+  flex:0 0 auto;
+}
+
+.modalHead h2{
+  margin:0;
+  font-size:16px;
+}
+
+.mInfo{
+  margin:6px 0 0;
+  color:var(--muted);
+  font-size:12px;
+}
+
+/* 左：画像 / 右：縦長テキスト */
+
+.modalBody.split{
+  flex:1 1 auto;
+  min-height:0;
+  height:auto;
+
+  display:grid;
+  grid-template-columns: 1fr 360px;
+  gap:20px;
+  padding:18px;
+  align-items:start;
+}
+
+/* ★初期はストーリー非表示（画像だけ） */
+.modalBody.split.storyHidden{
+  grid-template-columns: 1fr 0px;
+  gap:0;
+  overflow:hidden;
+}
+
+/* 画像を画面いっぱいに */
+
+.leftArea{
+  min-width:0;
+  min-height:0;
+  height:100%;
+  align-self:start;
+}
+
+.leftArea img{
+  width:100%;
+  height:100%;
+  max-height:100%;
+  object-fit:contain;
+  object-position: top center;
+  background:#07080b;
+  border-radius:14px;
+  border:1px solid var(--line);
+}
+
+/* 右：テキストエリア */
+
+.rightArea{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  gap:12px;
+  align-self:start;
+  transition: opacity .18s ease;
+  min-height:0;
+}
+
+/* ★閉じた時：完全に隠す */
+.modalBody.split.storyHidden .rightArea{
+  opacity:0;
+  pointer-events:none;
+  width:0;
+  overflow:hidden;
+}
+
+.storyBox{
+  flex:1;
+  overflow-y:auto;
+  border:1px solid var(--line);
+  padding:18px;
+  border-radius:14px;
+  background:#0f1120;
+  min-height:0;
+}
+
+.storyBox p{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.9;
+  white-space:pre-wrap;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px){
+
+  .modalBody.split{
+    grid-template-columns:1fr;
+  }
+
+  .modalBody.split.storyHidden{
+    grid-template-columns:1fr;
+  }
+
+  .rightArea{
+    height:auto;
+  }
+
+  .storyBox{
+    max-height:40vh;
+  }
+
+  .modalBody.split.storyHidden .rightArea{
+    display:none;
+  }
+}
