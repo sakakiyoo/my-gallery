@@ -56,7 +56,7 @@ async function updateCounter(){
   const el = document.getElementById("visitCount");
   if (!el) return;
 
-  const WORKER_URL = "https://5222.kiyotake-sakaki.workers.dev/";
+  // const WORKER_URL = "https://5222.kiyotake-sakaki.workers.dev/";
 
   try{
     const res = await fetch(WORKER_URL, { cache: "no-store" });
@@ -108,7 +108,7 @@ if (storyToggle){
 
 /* =========================
    BGM PLAYLIST（NotSupportedError 対策版）
-   - ./audio/ に bgm01.mp3 ... bgm50.mp3 を置く想定
+   - ./audio/ に bgm01.mp3 ... bgm19.mp3 を置く想定
    - 読めない/壊れてる/404 の曲が混ざっても自動でスキップ
 ========================= */
 
@@ -543,7 +543,7 @@ async function init(){
 
   setStory(false);
 
-  updateCounter();
+  // updateCounter();
 }
 
 init().catch(err=>{
