@@ -50,27 +50,95 @@ function norm(s){
 
 /* =========================
    ACCESS COUNTER（Cloudflare Worker + KV）
-   - 重要：WORKER_URL が未定義だとカウントされません
-   - 重要：init() 内で updateCounter() を呼ぶ必要があります
+   - 表示されない原因を潰した堅牢版
+   - JSONでもtextでもOK
+   - inc方式（/?inc=1）と通常GET両対応（Worker側実装差を吸収）
 ========================= */
 
-// ★あなたのWorker URLをここに設定（末尾スラッシュ有りでも無しでもOK）
-const WORKER_URL = "https://5222.kiyotake-sakaki.workers.dev/";
+// ★あなたのWorker URL（末尾スラッシュは不要：正規化します）
+const WORKER_URL = "https://5222.kiyotake-sakaki.workers.dev";
+
+function normalizeUrl(u){
+  try{
+    const url = new URL(u);
+    // 末尾の / を落とす（ただしルートはそのまま）
+    url.pathname = url.pathname.replace(/\/+$/, "") || "/";
+    // 末尾スラッシュ統一のため、最終的に "/"
+    if (url.pathname !== "/") url.pathname = url.pathname.replace(/\/+$/, "");
+    return url.toString().replace(/\/$/, ""); // 最後に1回だけ落とす
+  }catch{
+    return u.replace(/\/+$/, "");
+  }
+}
+
+async function readAsNumber(res){
+  // まずJSONを試す→ダメならtext
+  const ct = (res.headers.get("content-type") || "").toLowerCase();
+
+  // JSONっぽい場合
+  if (ct.includes("application/json") || ct.includes("text/json") || ct.includes("+json")){
+    try{
+      const j = await res.json();
+      // 想定キーを広く拾う
+      const v = Number(
+        (j && (j.value ?? j.count ?? j.visits ?? j.total ?? j.data)) ?? NaN
+      );
+      if (Number.isFinite(v)) return v;
+      // まれに {value:"123"} 以外の形
+      const vv = Number(j);
+      if (Number.isFinite(vv)) return vv;
+    }catch{
+      // 下でtextにフォールバック
+    }
+  }
+
+  // textで読む
+  const t = await res.text();
+  // "123" / "count:123" みたいなのも拾う
+  const m = String(t).match(/-?\d+/);
+  if (!m) return NaN;
+  return Number(m[0]);
+}
 
 async function updateCounter(){
   const el = document.getElementById("visitCount");
   if (!el) return;
 
+  const base = normalizeUrl(WORKER_URL);
+
+  // Workerの作りがどっちでも動くように2段階で試す
+  // 1) /?inc=1 （増やして返す方式）
+  // 2) / （ただ返す方式）
+  const candidates = [
+    `${base}/?inc=1`,
+    `${base}/`,
+  ];
+
   try{
-    const res = await fetch(WORKER_URL, { cache: "no-store" });
-    if (!res.ok) throw new Error(`Worker counter error: ${res.status}`);
+    let lastErr = null;
 
-    const data = await res.json();
+    for (const url of candidates){
+      try{
+        const res = await fetch(url, {
+          method: "GET",
+          cache: "no-store",
+          // CORSで落ちる時もあるので明示（Worker側で許可が必要）
+          mode: "cors",
+        });
 
-    const v = Number((data && data.value) ?? NaN);
-    if (!Number.isFinite(v)) throw new Error("Worker response has no numeric value");
+        if (!res.ok) throw new Error(`counter http ${res.status}`);
 
-    el.textContent = String(v).padStart(6, "0");
+        const v = await readAsNumber(res);
+        if (!Number.isFinite(v)) throw new Error("no numeric value");
+
+        el.textContent = String(v).padStart(6, "0");
+        return; // 成功したら終了
+      }catch(e){
+        lastErr = e;
+      }
+    }
+
+    throw lastErr || new Error("counter unknown error");
   }catch(e){
     el.textContent = "------";
     console.warn("updateCounter failed:", e);
@@ -287,6 +355,7 @@ function initBgm(){
 ========================= */
 
 function buildTagOptions(items){
+  if (!tagSel) return;
   const tags = new Set();
   items.forEach(it => (it.tags || []).forEach(t => tags.add(t)));
   [...tags].sort((a,b)=>a.localeCompare(b,"ja")).forEach(t=>{
@@ -298,12 +367,12 @@ function buildTagOptions(items){
 }
 
 function filterItems(items){
-  const query = norm(q.value);
-  const tag = tagSel.value;
+  const query = norm(q?.value);
+  const tag = tagSel?.value || "";
   const favs = getFavs();
 
   return items.filter(it=>{
-    if (onlyFav.checked && !favs.has(it.id)) return false;
+    if (onlyFav?.checked && !favs.has(it.id)) return false;
 
     if (tag){
       const has = (it.tags || []).includes(tag);
@@ -324,8 +393,9 @@ function render(){
   const favs = getFavs();
   const items = filterItems(DATA);
 
-  meta.textContent = `表示：${items.length} / ${DATA.length} 件`;
+  if (meta) meta.textContent = `表示：${items.length} / ${DATA.length} 件`;
 
+  if (!grid) return;
   grid.innerHTML = "";
   for (const it of items){
     const card = document.createElement("article");
@@ -431,22 +501,26 @@ function renderModal(it){
   currentItem = it;
   const favs = getFavs();
 
-  mTitle.textContent = it.title;
-  mInfo.textContent = `${it.id}${it.date ? " ・ " + it.date : ""}`;
-  mImg.src = it.file;
-  mImg.alt = it.title;
+  if (mTitle) mTitle.textContent = it.title;
+  if (mInfo) mInfo.textContent = `${it.id}${it.date ? " ・ " + it.date : ""}`;
+  if (mImg){
+    mImg.src = it.file;
+    mImg.alt = it.title;
+  }
 
-  mTags.innerHTML = "";
-  (it.tags || []).forEach(t=>{
-    const s = document.createElement("span");
-    s.className = "tag";
-    s.textContent = t;
-    mTags.appendChild(s);
-  });
+  if (mTags){
+    mTags.innerHTML = "";
+    (it.tags || []).forEach(t=>{
+      const s = document.createElement("span");
+      s.className = "tag";
+      s.textContent = t;
+      mTags.appendChild(s);
+    });
+  }
 
-  mDesc.textContent = it.desc || "";
+  if (mDesc) mDesc.textContent = it.desc || "";
 
-  mFav.textContent = favs.has(it.id) ? "★" : "☆";
+  if (mFav) mFav.textContent = favs.has(it.id) ? "★" : "☆";
 
   const canNav = VISIBLE.length > 1;
   if (mPrev) mPrev.disabled = !canNav;
@@ -464,7 +538,7 @@ function openModal(it){
 
   setStory(false);
   renderModal(it);
-  modal.showModal();
+  if (modal) modal.showModal();
 }
 
 function goNext(){
@@ -487,13 +561,13 @@ if (mNext) mNext.addEventListener("click", goNext);
 if (mPrev) mPrev.addEventListener("click", goPrev);
 
 document.addEventListener("keydown", (e)=>{
-  if (!modal.open) return;
+  if (!modal?.open) return;
   if (e.key === "ArrowRight") goNext();
   if (e.key === "ArrowLeft") goPrev();
 });
 
 function closeModal(){
-  modal.close();
+  modal?.close();
   currentItem = null;
   setStory(false);
 
@@ -501,8 +575,8 @@ function closeModal(){
   currentIndex = -1;
 }
 
-mClose.addEventListener("click", closeModal);
-modal.addEventListener("click", (e)=>{
+mClose?.addEventListener("click", closeModal);
+modal?.addEventListener("click", (e)=>{
   const rect = modal.getBoundingClientRect();
   const inDialog = (
     e.clientX >= rect.left && e.clientX <= rect.right &&
@@ -511,14 +585,14 @@ modal.addEventListener("click", (e)=>{
   if (!inDialog) closeModal();
 });
 
-modal.addEventListener("close", ()=>setStory(false));
-modal.addEventListener("cancel", ()=>setStory(false));
+modal?.addEventListener("close", ()=>setStory(false));
+modal?.addEventListener("cancel", ()=>setStory(false));
 
-mFav.addEventListener("click", ()=>{
+mFav?.addEventListener("click", ()=>{
   if (!currentItem) return;
   toggleFav(currentItem.id);
   const favs = getFavs();
-  mFav.textContent = favs.has(currentItem.id) ? "★" : "☆";
+  if (mFav) mFav.textContent = favs.has(currentItem.id) ? "★" : "☆";
   render();
 });
 
@@ -529,7 +603,11 @@ if (mShare) {
   });
 }
 
-[q, tagSel, onlyFav].forEach(el => el.addEventListener("input", render));
+[q, tagSel, onlyFav].filter(Boolean).forEach(el => {
+  // input / change どっちでも反応するように
+  el.addEventListener("input", render);
+  el.addEventListener("change", render);
+});
 
 /* =========================
    INIT
@@ -546,11 +624,11 @@ async function init(){
 
   setStory(false);
 
-  // ★観測ログを更新（ここがコメントアウトされていると増えません）
+  // ★観測ログを更新（ここが動けば表示は変わる）
   updateCounter();
 }
 
 init().catch(err=>{
-  meta.textContent = "読み込みに失敗しました。data/gallery.json を確認してください。";
+  if (meta) meta.textContent = "読み込みに失敗しました。data/gallery.json を確認してください。";
   console.error(err);
 });
