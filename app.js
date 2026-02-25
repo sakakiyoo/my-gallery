@@ -50,13 +50,16 @@ function norm(s){
 
 /* =========================
    ACCESS COUNTER（Cloudflare Worker + KV）
+   - 重要：WORKER_URL が未定義だとカウントされません
+   - 重要：init() 内で updateCounter() を呼ぶ必要があります
 ========================= */
+
+// ★あなたのWorker URLをここに設定（末尾スラッシュ有りでも無しでもOK）
+const WORKER_URL = "https://5222.kiyotake-sakaki.workers.dev/";
 
 async function updateCounter(){
   const el = document.getElementById("visitCount");
   if (!el) return;
-
-  // const WORKER_URL = "https://5222.kiyotake-sakaki.workers.dev/";
 
   try{
     const res = await fetch(WORKER_URL, { cache: "no-store" });
@@ -194,7 +197,7 @@ async function playBgm(){
   // src未設定なら最初をロード
   if (!bgm.src) loadTrack(currentTrackIndex);
 
-  // 再生トライ → ダメなら次へスキップを最大50回
+  // 再生トライ → ダメなら次へスキップ
   for (let n = 0; n < PLAYLIST.length; n++){
     const ok = await tryPlayCurrent();
     if (ok) return;
@@ -543,7 +546,8 @@ async function init(){
 
   setStory(false);
 
-  // updateCounter();
+  // ★観測ログを更新（ここがコメントアウトされていると増えません）
+  updateCounter();
 }
 
 init().catch(err=>{
