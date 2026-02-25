@@ -3,8 +3,95 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tokyo Neon Dystopia</title>
+
+  <!-- ===== SEO: Title / Description ===== -->
+  <title>Tokyo Neon Dystopia｜断面都市ギャラリー（昭和レトロ×近未来）</title>
+  <meta name="description" content="Tokyo Neon Dystopia｜昭和レトロ×近未来の断面都市イラストギャラリー。ディストピアな会社員の日常、SF世界観、AI生成/ジェネレーティブアート作品を展示しています。" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- ===== Google Search Console Verification ===== -->
+  <!-- Search Console が発行したコードに置き換えてください -->
+  <!-- 例: <meta name="google-site-verification" content="XXXXXXXXXXXXXXXXXXXX" /> -->
+  <!-- <meta name="google-site-verification" content="YOUR_CODE_HERE" /> -->
+
+  <!-- ===== Canonical ===== -->
+  <link rel="canonical" href="https://tokyoneondystopia.com/" />
+
+  <!-- ===== OGP ===== -->
+  <meta property="og:site_name" content="Tokyo Neon Dystopia" />
+  <meta property="og:title" content="Tokyo Neon Dystopia｜断面都市ギャラリー" />
+  <meta property="og:description" content="昭和レトロ×近未来の断面都市。ディストピアな会社員の日常を描くAI生成アートギャラリー。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tokyoneondystopia.com/" />
+  <meta property="og:image" content="https://tokyoneondystopia.com/images/og.jpg" />
+  <meta property="og:image:alt" content="Tokyo Neon Dystopia｜断面都市ギャラリーのOG画像" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tokyo Neon Dystopia｜断面都市ギャラリー" />
+  <meta name="twitter:description" content="昭和レトロ×近未来の断面都市。ディストピアな会社員の日常を描くAI生成アートギャラリー。" />
+  <meta name="twitter:image" content="https://tokyoneondystopia.com/images/og.jpg" />
+  <!-- 任意：アカウントがある場合だけ -->
+  <!-- <meta name="twitter:site" content="@YOUR_ACCOUNT" /> -->
+  <!-- <meta name="twitter:creator" content="@YOUR_ACCOUNT" /> -->
+
+  <!-- ===== Keywords (補助) ===== -->
+  <meta name="keywords" content="tokyoneondystopia,dystopia art,retrofuturism,sf art,workinglife,officelife,strangeworld,aiart,generativeart,ディストピア,会社員の日常,断面都市,昭和レトロ,近未来" />
+
+  <!-- ===== Theme / Icons ===== -->
+  <meta name="theme-color" content="#0b0d12" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- ===== Styles ===== -->
   <link rel="stylesheet" href="./style.css" />
+
+  <!-- ===== Structured Data (JSON-LD) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://tokyoneondystopia.com/#org",
+        "name": "Tokyo Neon Dystopia",
+        "url": "https://tokyoneondystopia.com/"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://tokyoneondystopia.com/#website",
+        "url": "https://tokyoneondystopia.com/",
+        "name": "Tokyo Neon Dystopia",
+        "description": "昭和レトロ×近未来の断面都市イラストギャラリー。ディストピアな会社員の日常やSF世界観のAI生成/ジェネレーティブアート作品を展示。",
+        "inLanguage": "ja",
+        "publisher": { "@id": "https://tokyoneondystopia.com/#org" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://tokyoneondystopia.com/#webpage",
+        "url": "https://tokyoneondystopia.com/",
+        "name": "Tokyo Neon Dystopia｜断面都市ギャラリー（昭和レトロ×近未来）",
+        "isPartOf": { "@id": "https://tokyoneondystopia.com/#website" },
+        "about": [
+          { "@type": "Thing", "name": "dystopia art" },
+          { "@type": "Thing", "name": "retrofuturism" },
+          { "@type": "Thing", "name": "sf art" },
+          { "@type": "Thing", "name": "working life" },
+          { "@type": "Thing", "name": "office life" },
+          { "@type": "Thing", "name": "ai art" },
+          { "@type": "Thing", "name": "generative art" },
+          { "@type": "Thing", "name": "ディストピア" },
+          { "@type": "Thing", "name": "会社員の日常" }
+        ],
+        "inLanguage": "ja"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -13,6 +100,11 @@
     <div class="brand">
       <h1>Tokyo Neon Dystopia</h1>
       <p class="sub">断面都市ギャラリー</p>
+
+      <p class="seoText" style="margin:8px 0 0; font-size:12px; color:var(--muted);">
+        dystopia art / retrofuturism / sf art / working life / office life / strange world / AI art / generative art /
+        ディストピア / 会社員の日常
+      </p>
     </div>
 
     <div class="controls">
@@ -40,7 +132,6 @@
     </div>
   </header>
 
-  <!-- ✅ audioタグ構造の修正 -->
   <audio id="bgm" preload="auto">
     <source src="./audio/bgm.mp3" type="audio/mpeg" />
   </audio>
@@ -48,6 +139,23 @@
   <main>
     <div id="meta" class="meta"></div>
     <div id="grid" class="grid"></div>
+
+    <noscript>
+      <section style="max-width:920px; margin:24px auto 0; padding:0 16px; color:#9aa0a6; font-size:12px; line-height:1.8;">
+        <h2 style="font-size:14px; margin:0 0 8px;">このサイトについて</h2>
+        <p style="margin:0;">
+          このギャラリーはJavaScriptを使用しています。表示されない場合は、ブラウザ設定でJavaScriptを有効にしてください。
+        </p>
+      </section>
+    </noscript>
+
+    <section style="max-width:920px; margin:24px auto 0; padding:0 16px; color:var(--muted); font-size:12px; line-height:1.8;">
+      <h2 style="font-size:14px; margin:0 0 8px; color:inherit;">このサイトについて</h2>
+      <p style="margin:0;">
+        Tokyo Neon Dystopia は、昭和レトロと近未来が交差する「断面都市」を舞台に、ディストピアな会社員の日常やSF的な異世界観を描いた
+        AI生成／ジェネレーティブアートのギャラリーです。各作品にはタイトル・タグ・ストーリー（観測ログ）を付与し、検索・閲覧しやすい形で展示しています。
+      </p>
+    </section>
   </main>
 
   <dialog id="modal" class="modal">
@@ -58,12 +166,10 @@
       </div>
 
       <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;">
-
         <button id="storyToggle" class="btn" type="button" aria-pressed="false">
           Story
         </button>
 
-        <!-- 記号ナビ -->
         <button id="mPrev" class="btn navBtn" type="button" aria-label="前のイラストへ">
           ◁
         </button>
@@ -92,6 +198,6 @@
     </div>
   </dialog>
 
-  <script src="./app.js"></script>
+  <script src="./app.js" defer></script>
 </body>
 </html>
