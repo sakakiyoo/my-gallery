@@ -183,7 +183,7 @@ if (storyToggle){
    - 読めない/壊れてる/404 の曲が混ざっても自動でスキップ
 ========================= */
 
-const PLAYLIST = Array.from({ length: 19 }, (_, i) => {
+const PLAYLIST = Array.from({ length: 30 }, (_, i) => {
   const n = String(i + 1).padStart(2, "0");
   return `./audio/bgm${n}.mp3`;
 });
