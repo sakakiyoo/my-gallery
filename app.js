@@ -29,6 +29,8 @@ const siteTitle = $("#siteTitle");
 const siteSub = $("#siteSub");
 const visitLabel = $("#visitLabel");
 
+const MOBILE_BREAKPOINT = 900;
+
 let DATA = [];
 let currentItem = null;
 
@@ -52,6 +54,10 @@ const UI_TEXT = {
   metaCount: (total) => `Archive: ${total}`,
   loadError: "Failed to load. Please check data/gallery.json."
 };
+
+function isMobileLayout(){
+  return window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT}px)`).matches;
+}
 
 function escapeHtml(str){
   return String(str ?? "")
@@ -189,7 +195,7 @@ function updateStaticTexts(){
 
   const isOn = localStorage.getItem(BGM_KEY) === "1";
   setBgmUi(isOn);
-  setStory(storyOpen);
+  setStory(storyOpen, { scrollIntoView: false });
 }
 
 /* =========================
@@ -274,26 +280,47 @@ async function updateCounter(){
    STORY TOGGLE
 ========================= */
 
-function setStory(open){
-  storyOpen = open;
+function scrollStoryIntoView(){
+  if (!storyPanel || !modal?.open) return;
+  if (!isMobileLayout()) return;
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      storyPanel.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "nearest"
+      });
+    });
+  });
+}
+
+function setStory(open, options = {}){
+  const { scrollIntoView = true } = options;
+
+  storyOpen = !!open;
 
   if (storyPanel){
-    storyPanel.classList.toggle("isOpen", open);
-    storyPanel.setAttribute("aria-hidden", String(!open));
+    storyPanel.classList.toggle("isOpen", storyOpen);
+    storyPanel.setAttribute("aria-hidden", String(!storyOpen));
   }
 
   if (storyToggle){
-    storyToggle.classList.toggle("on", open);
-    storyToggle.setAttribute("aria-pressed", String(open));
-    storyToggle.textContent = open ? UI_TEXT.storyOn : UI_TEXT.story;
+    storyToggle.classList.toggle("on", storyOpen);
+    storyToggle.setAttribute("aria-pressed", String(storyOpen));
+    storyToggle.textContent = storyOpen ? UI_TEXT.storyOn : UI_TEXT.story;
   }
 
   if (storyLang){
-    storyLang.hidden = !open;
+    storyLang.hidden = !storyOpen;
   }
 
-  if (open && currentItem && mDesc){
+  if (storyOpen && currentItem && mDesc){
     mDesc.textContent = getStoryText(currentItem);
+  }
+
+  if (storyOpen && scrollIntoView){
+    scrollStoryIntoView();
   }
 }
 
@@ -581,9 +608,17 @@ function openModal(it){
 
   setLang("en");
   renderModal(it);
-  setStory(false);
+  setStory(false, { scrollIntoView: false });
 
-  if (modal && !modal.open) modal.showModal();
+  if (modal && !modal.open) {
+    modal.showModal();
+  }
+
+  requestAnimationFrame(() => {
+    if (mImg) {
+      mImg.decoding = "async";
+    }
+  });
 }
 
 function goNext(e){
@@ -593,7 +628,7 @@ function goNext(e){
   currentIndex = (currentIndex + 1) % VISIBLE.length;
   setLang("en");
   renderModal(VISIBLE[currentIndex]);
-  setStory(false);
+  setStory(false, { scrollIntoView: false });
 }
 
 function goPrev(e){
@@ -603,7 +638,7 @@ function goPrev(e){
   currentIndex = (currentIndex - 1 + VISIBLE.length) % VISIBLE.length;
   setLang("en");
   renderModal(VISIBLE[currentIndex]);
-  setStory(false);
+  setStory(false, { scrollIntoView: false });
 }
 
 if (mNext) mNext.addEventListener("click", goNext);
@@ -614,6 +649,13 @@ document.addEventListener("keydown", (e)=>{
   if (e.key === "ArrowRight") goNext();
   if (e.key === "ArrowLeft") goPrev();
 });
+
+function resetModalState(){
+  currentItem = null;
+  setStory(false, { scrollIntoView: false });
+  VISIBLE = [];
+  currentIndex = -1;
+}
 
 function closeModal(){
   if (!modal?.open) return;
@@ -631,19 +673,8 @@ modal?.addEventListener("click", (e)=>{
   }
 });
 
-modal?.addEventListener("close", ()=>{
-  currentItem = null;
-  setStory(false);
-  VISIBLE = [];
-  currentIndex = -1;
-});
-
-modal?.addEventListener("cancel", ()=>{
-  currentItem = null;
-  setStory(false);
-  VISIBLE = [];
-  currentIndex = -1;
-});
+modal?.addEventListener("close", resetModalState);
+modal?.addEventListener("cancel", resetModalState);
 
 /* =========================
    INIT
@@ -659,7 +690,7 @@ async function init(){
 
   render();
   setLang("en");
-  setStory(false);
+  setStory(false, { scrollIntoView: false });
   updateCounter();
 }
 
