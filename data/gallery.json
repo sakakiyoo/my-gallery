@@ -1,280 +1,220 @@
 {
   "items": [
     {
-      "id": "0001",
-      "title": "海辺のベルトコンベア",
-      "file": "images/0001.png",
+      "id": "001",
+      "title_en": "Seaside Conveyor Belt",
+      "title_ja": "海辺のベルトコンベア",
+      "file": "images/001.png",
       "date": "26.02.16",
-      "tags": [
-        "ベルトコンベア",
-        "海辺",
-        "山"
-      ],
-      "desc": "none"
+      "desc": "潮の匂いが風に混じるこの町には\n古いベルトコンベアがある\n\n錆びた鉄がギィギィ\n\nウォンウォンと荷物を運ぶ\n\nその音さえ住人たちには\n波と同じだった\n\n子どもは影で遊び\n大人は見上げないし誰も気にしない\n\nだが外から来た者は\n何を運ぶのかと不思議そうに聞く\n\nそれでも町の者は曖昧に笑うだけ\n答えは語られない\n\nいつから動くのか\n誰も知らないまま昔からそこにある",
+      "desc_en": "In this town\nwhere sea scent drifts\nthere stands an old belt\n\nRusted iron creaks\nsqueak squeak\nlow hum hum\n\nIt carries its load\nyet no one wonders\nwhy it moves\n\nEven that sound\nto the people here\nis just like waves\n\nChildren play beneath\nadults never look up\nno one minds it\n\nBut outsiders come\nand ask what it carries\nwith puzzled eyes\n\nThe townspeople\nonly smile vaguely\nnever giving answers\n\nSince when it moves\nno one truly knows\nit has always been there"
     },
     {
-      "id": "0002",
-      "title": "水没区画のコーヒースタンド",
-      "file": "images/0002.png",
+      "id": "002",
+      "title_en": "Submerged Coffee Stand",
+      "title_ja": "水没区画のコーヒースタンド",
+      "file": "images/002.png",
       "date": "26.02.16",
-      "tags": [
-        "水上喫茶",
-        "浸水未来",
-        "機械と日常"
-      ],
-      "desc": "none"
+      "desc": "海の上に浮かぶように建つ\nこの古いコーヒーショップは\nかつて街の一部だった\n\nだがある年の洪水で\n海が侵食し\n店のすぐ傍まで迫った\n\n今では水面が広がり\n魚たちが静かに集まり\nこちらを見上げている\n\nたまに電気が乱れ\n今日も工事トレーラーが来ている\n\nあの鮫のような魚は何なのか\n店を囲むように\nずっと客を見ている\n\nまるで何かを\n待っているかのように\n\nカウンターで男が言う\n「マスター いつものコーヒー」\n\nマスターは静かに答える\n「ああ 濃いめだ」\n\nもう一人の男が笑う\n「お前さん また来たのかい」\n\nそして低くつぶやく\n「長く生きればいいってもんじゃない」\n\n視線は水面へ向けられる\n「あいつらを見ろよ」\n\n「そう 待ってるぜ」",
+      "desc_en": "This coffee shop stands\nas if floating on the sea\nonce part of a living town\n\nBut one year a great flood came\nthe sea crept inward\nreaching just beside the shop\n\nNow water spreads everywhere\nfish gather in silence\nstaring up at the people\n\nSometimes the power flickers\nand today again\na repair trailer has arrived\n\nWhat are those shark like fish\nthey surround the shop\nwatching every customer\n\nAs if they are waiting\nfor something to happen\n\nAt the counter a man says\nMaster the usual coffee\n\nThe master replies quietly\nStrong as always\n\nAnother man lets out a laugh\nYou came again huh\n\nThen he murmurs low\nLiving long is not everything\n\nHis eyes drift to the water\nLook at them down there\n\nYeah\nThey are waiting"
     },
     {
-      "id": "0003",
-      "title": "旧地下幹線トンネル",
-      "file": "images/0003.png",
+      "id": "003",
+      "title_en": "Old Rail Tunnel",
+      "title_ja": "旧地下幹線トンネル",
+      "file": "images/003.png",
       "date": "26.02.16",
-      "tags": [
-        "侍と死神",
-        "地下区画",
-        "異形の宴"
-      ],
-      "desc": "この地下鉄は走っていない。停まってもいない。ただ「続いている」だけだ。ゴウンと低く鳴る配管の音が時間の継ぎ目を縫い合わせている。\n\n車内が狭く感じるのは、人数のせいじゃない。時代が重なりすぎて、空気がミシリと軋んでいる。何回目のタイムスリップかは、もう誰も数えなくなった。\n\nカランとグラスが触れる音だけが回数の代わりだ。酒を飲む以外にやることがないのは、ここでは仕事も使命も、ポロポロと剥がれ落ちるからだ。\n\n剣を置いた侍も任務を失った宇宙飛行士も、同じ琥珀色を揺らしながら黙って喉を鳴らす。\n\nごくり。\n\n死神だけは酔わない。酔えないのか、それとも忘れたいのか。\n\nミイラは毎回同じ席に座る。ぎしりと椅子が鳴っても、理由は本人も覚えていない。\n\n世界が違っても乾杯の瞬間だけは必ず揃う。チンと響くその一瞬、時間は静止する。\n\nこの車両に終点はないが、夜だけは必ず来る。そして今日もまたどこかの世界が終わって、誰かがこの車内へ流れ着いた。\n\nドアは開かないのに、確かに増えていく。"
+      "desc": "この地下鉄は\n走っていない\nただ続いている\n\nゴウンと響く音が\n時間の継ぎ目を\n縫い合わせている\n\n車内が狭いのは\n人のせいではない\n時代が重なりすぎた\n\n空気がミシリと軋み\n何度目の移動か\n誰も覚えていない\n\nカランと響く音だけが\n回数の代わりになる\n酒を飲むしかない\n\nここでは仕事も\n使命も剥がれ落ち\nただ残るだけ\n\n侍も宇宙飛行士も\n同じ色を揺らし\n黙って喉を鳴らす\n\nごくり\n\n死神だけは\n酔わない\nそれとも忘れたいのか\n\nミイラはいつも\n同じ席に座る\n理由は誰も知らない\n\n世界が違っても\n乾杯の瞬間だけ\n必ず揃う\n\nチンと鳴る音で\n時間は一瞬\n止まる\n\n終点はないが\n夜だけは来る\n必ず訪れる\n\n今日もどこかの世界が\n終わりを迎え\n誰かが流れ着く\n\nドアは開かない\nそれでも確かに\n増えていく",
+      "desc_en": "This subway\ndoes not run\nit only continues\n\nA low rumble\nstitches together\nthe seams of time\n\nThe space feels tight\nnot from people\nbut layered eras\n\nThe air creaks\nunder the weight of time\nno one counts anymore\n\nThe sound of a glass\nmarks the passage\nnothing else to do\n\nHere work fades\nmissions fall away\nonly presence remains\n\nA samurai\nan astronaut\nboth drink in silence\n\ngulp\n\nOnly the reaper\ndoes not drink\nor cannot forget\n\nThe mummy returns\nto the same seat\nno one knows why\n\nDifferent worlds\nyet every toast\naligns perfectly\n\nA single chime\nand time itself\ncomes to a halt\n\nNo final stop\nyet night arrives\nwithout fail\n\nAnother world ends\nand someone new\ndrifts into this car\n\nThe doors never open\nyet somehow\nthey keep increasing"
     },
     {
-      "id": "0004",
-      "title": "甲殻住宅セクター",
-      "file": "images/0004.png",
+      "id": "004",
+      "title_en": "Crustacean Housing Sector",
+      "title_ja": "甲殻住宅セクター",
+      "file": "images/004.png",
       "date": "26.02.28",
-      "tags": [
-        "生物インフラ",
-        "昭和デスク",
-        "会社員の部屋"
-      ],
-      "desc": "引っ越してもう二年か。\n結構時間が経ったもんだ。\n\n最初は少し違和感もあったが\n住んでみると意外と快適だ。\n\n今の時代、どこに住んでいても仕事はできる。\n距離なんてほとんど関係ない。\n\nこの住宅、時々奥の方から\nググーググーって低い音がするんだ。\n\n気になって上司に電話したら\n「ああ、そんなもんだ。気にするな」って言われた。\n\nまあ確かに、生活には特に支障はない。\n\nただもう一つ少し気になることがある\n\nムチュムチュ\n\n朝何かを咀嚼するような音がするんだ\nあれは一体なんなんだろう。\n\n俺の食事はこの森で採れた木の実と\n昆虫のミックスサラダ\n\n栄養があって悪くない。\n\nさあいつも通り上司へメールだ\n\n今日も世界が平和でありますように"
+      "desc": "引っ越してもう二年\n時間が経ったもんだ\n\n最初は少し違和感もあったが\n今では意外と快適だ\n\n今の時代どこにいても\n仕事はできる\n\n距離なんてほとんど\n関係ない\n\nこの住宅は時々\n奥の方から\n\nググーググーと\n低い音がする\n\n気になって上司に電話したら\n気にするなと言われた\n\nまあ確かに\n生活に支障はない\n\nただもう一つだけ\n気になることがある\n\nムチュムチュ\n\n朝何かを咀嚼するような\n音がする\n\nあれは一体\nなんなんだろう\n\n食事はこの森の木の実と\n昆虫のサラダ\n\n栄養もあって\n悪くない\n\nさあいつも通り\n上司へメールだ\n\n今日も世界が\n平和でありますように",
+      "desc_en": "It has been two years\nsince I moved here\n\nAt first it felt strange\nbut now it is quite comfortable\n\nThese days you can work\nfrom anywhere\n\nDistance hardly\nmatters anymore\n\nThis place sometimes\nfrom deep inside\n\nmakes a low sound\ngruu gruu\n\nI called my boss about it\nhe said do not worry\n\nAnd honestly\nit causes no trouble\n\nBut there is still\none thing that bothers me\n\nMuchu muchu\n\nIn the morning\nI hear chewing\n\nWhat could that\npossibly be\n\nMy meals are always\nnuts from the forest\n\nand an insect\nmixed salad\n\nIt is nutritious\nnot bad at all\n\nNow as always\nI send a mail\n\nHoping the world\nstays peaceful today"
     },
     {
-      "id": "0005",
-      "title": "殻の中の定時業務",
-      "file": "images/0005.png",
+      "id": "005",
+      "title_en": "Routine Inside the Shell",
+      "title_ja": "殻の中の定時業務",
+      "file": "images/005.png",
       "date": "26.03.01",
-      "tags": [
-        "断面構造",
-        "生体マシン",
-        "移動オフィス"
-      ],
-      "desc": "さあ 今日は仕事を始めよう\nここは砂漠エリア\n二週間の滞在だ\n\n最初は乾いた風に戸惑うが\nそのうち慣れる\nぼちぼちやればいい\n\n食料は一階の池にある\nあの水槽の魚だ\n\n天日干しにするか\n新鮮なら刺身にして\n夕日を眺めながらビールでもやろう\n\n巨大な殻の内側で\n今日も各部署が動き出す\n\nカタカタと低い送風音\n\nおや\n\nドクン\nドクンと床の奥から心臓音\n\nああ 彼が目覚めている\nこの施設は機械ではない\n\n生き物だ\n\nうん\n今日も「正常に異常」"
+      "desc": "ここは砂漠エリア\n二週間の滞在だ\n\n最初は乾いた風に\n戸惑うがそのうち慣れる\n\nぼちぼちやればいい\n焦ることはない\n\n食料は一階の池\nあの水槽の魚だ\n\n天日干しにするか\n新鮮なら刺身だ\n\n夕日を眺めながら\nビールでもやろう\n\n巨大な殻の内側で\n今日も部署が動く\n\nカタカタと響く\n低い送風音\n\nおや\n\nドクン ドクンと\n床の奥から音\n\nああ彼が目覚める\nこれは機械ではない\n\n生き物だ\n\nうん\n今日も正常に異常",
+      "desc_en": "This is the desert zone\nA stay of two weeks\n\nAt first the dry wind\nfeels unfamiliar\nbut you get used to it\n\nTake it easy\nno need to rush\n\nFood is in the pool\non the first floor\nfish in the tank\n\nSun dry them\nor if fresh\neat them raw\n\nWatch the sunset\nhave a beer\nand let time pass\n\nInside a giant shell\neach department\nbegins to move\n\nA low rattling\nfan noise echoes\n\nOh\n\nThump thump\nfrom deep below\n\nAh he is awake\nthis is not a machine\n\nIt is alive\n\nYeah today as well\nnormally abnormal"
     },
     {
-      "id": "0006",
-      "title": "キャプテンの判断",
-      "file": "images/0006.png",
+      "id": "006",
+      "title_en": "Captain’s Decision",
+      "title_ja": "キャプテンの判断",
+      "file": "images/006.png",
       "date": "26.03.01",
-      "tags": [
-        "忍者会議",
-        "昭和レトロ和室",
-        "ネオン海面"
-      ],
-      "desc": "ニンニン\nみんな揃ったな\n\nそういえば今晩のミッション みんなわかってるかな\n少し危険な作業になるかもしれないが 頼んだぞ\n\nはい\n任務内容は頭に叩き込んであります\n\nよし、なら飯を食って 少し休め\n\nところで一つだけ質問いいですか？\n\nなんだ新人\n\n今日のクラゲ\nなんかいつもよりちょっと大きくないですか\n\nドキン\n\n気づいたか。\nあれは気にするな 任務とは関係ない\n\nえ？でもフワリあんなに光って。。\n\n忍者は見たものすべてに反応しない\nそれが生き残るコツだ\n\nはい\n\nよし\nでは作戦開始まで\n静かに食え"
+      "desc": "ニンニン\nみんな揃ったな\n\n今晩の任務は\n把握しているな\n\n少し危険になる\nかもしれないが\n頼んだぞ\n\nはい\n任務はすべて\n頭に入っています\n\nよし\nなら飯を食い\n少し休め\n\nところで一つ\n質問いいですか\n\nなんだ新人\n\n今日のクラゲ\n少し大きく\nないですか\n\nドキン\n\n気づいたか\nあれは気にするな\n任務と無関係だ\n\nでもあんなに\n光っていて\n\n忍は見たものに\nすべて反応しない\nそれが生きる術だ\n\nはい\n\nよし\n作戦開始まで\n静かに食え",
+      "desc_en": "Nin nin\nEveryone is here\n\nYou all understand\ntonight’s mission\n\nIt may be\na bit dangerous\nbut I’m counting on you\n\nYes\nThe mission details\nare memorized\n\nGood\nThen eat\nand get some rest\n\nBy the way\nmay I ask\none question\n\nWhat is it\nrookie\n\nThe jellyfish today\nseems a bit larger\nthan usual\n\nThump\n\nYou noticed\nIgnore it\nnot part of the mission\n\nBut it’s glowing\nso brightly\n\nA ninja does not react\nto everything seen\nthat is how we survive\n\nYes\n\nGood\nUntil the mission starts\neat quietly"
     },
     {
-      "id": "0007",
-      "title": "味付けはマイティーズ",
-      "file": "images/0007.png",
+      "id": "007",
+      "title_en": "The flavor is Mighties",
+      "title_ja": "味付けはマイティーズ",
+      "file": "images/007.png",
       "date": "26.03.02",
-      "tags": [
-        "宇宙飛行士",
-        "和服女性",
-        "魚"
-      ],
-      "desc": "地下施設の食堂は ブウンと低く唸っている\n焼いた魚の切り身、肉の缶詰、厚いトーストが無機質なトレイに整列している\n配管の奥で空気が循環する音だけが響く\n\n宇宙服の男がカウンターに立つ\n\nああ 今日の業務も疲れた\nいつもの魚のワインミッシュとコンビーフを一つ\nそしてトーストを一枚くれないかな\n\n着物姿の店員は 静かにうなずく\n帯に刺繍された星座が淡く瞬く\n\nはいよ お仕事お疲れ様\n今日の味付けは マイティーズよ\n\nマイティーズか。\nヘルメット越しに小さく息をつく\n\nありがとう\nこれで今晩もゆっくり寝れるよ\n\nジュウと鉄板が鳴る\n\n遠くで 別の宇宙服が同じ料理を受け取っている\n地上はもうないのに、この街だけが昭和の匂いを守りながら\n宇宙で夕食を続けている"
+      "desc": "地下施設の食堂は\nブウンと低く唸る\n\n焼いた魚や缶詰\n厚いトーストが並ぶ\n\n無機質なトレイに\n整然と置かれている\n\n配管の奥では\n空気が巡る音だけ響く\n\n宇宙服の男が立つ\nカウンターの前に\n\nああ今日も疲れた\nいつもの魚とワインミッシュ\n\nコンビーフを一つ\nトーストも一枚頼む\n\n着物姿の店員は\n静かにうなずく\n\n帯の星座が\n淡く瞬いている\n\nはいよお疲れ様\n今日の味付けはマイティーズ\n\nマイティーズか\n小さく息をつく\n\nありがとう\n今晩も眠れそうだ\n\nジュウと鉄板が鳴る\n\n遠くの席でも\n同じ料理が渡される\n\n地上はもうない\nそれでもこの街は続く\n\n昭和の匂いを残し\n宇宙で夕食を続けている",
+      "desc_en": "The underground diner\nhums low with a drone\n\nGrilled fish and canned meat\nthick toast laid in rows\n\nOn cold metal trays\neverything is aligned\n\nDeep in the pipes\nonly air moves and echoes\n\nA man in a suit\nstands at the counter\n\nAh today was long\nthe usual fish and wine mix\n\nOne corned beef please\nand a slice of toast\n\nThe kimono server\nnods without a word\n\nConstellations glow\nsoft along her sash\n\nAlright good work today\nseasoned with Mighties\n\nMighties huh\nhe lets out a small breath\n\nThank you\nI can sleep well tonight\n\nJu the iron plate sings\n\nFar away another suit\ntakes the same meal\n\nThe surface is gone\nyet this place remains\n\nHolding a Showa scent\ndinner goes on in space"
     },
     {
-      "id": "0008",
-      "title": "ガラスドームの呼吸",
-      "file": "images/0008.png",
+      "id": "008",
+      "title_en": "Glass Dome Breath",
+      "title_ja": "ガラスドームの呼吸",
+      "file": "images/008.png",
       "date": "26.03.03",
-      "tags": [
-        "ガスマスク",
-        "真空管装置",
-        "人機融合"
-      ],
-      "desc": "高層ビルの光がにじむ夜\nガラスドームの中で私はホースを握り直した\nこのアナログPCと向き合って何年になるだろう\n\nデジタル全盛の街であえて真空管とダイヤルにこだわり\nガスケーブルと人体を接続する実験を続けてきた\n\n効率の悪い古い機械\n\nだがこいつは嘘をつかない\n数字ではなく振動で応える\n\nブウウウン\n\n計器の針がカチリと震える\n\n若い頃は無謀だと言われた\nそれでもここまで辿り着いた\n\nこの密閉空間でコンピューターと人間を結び\n新しい生命体を起こす\n\nさあ動いてくれ\n奴らが来る前にこの都市の呼吸を\nこちら側へ奪い取るんだ"
+      "desc": "高層ビルの光にじむ夜\nガラスドームの中で\n私はホースを握り直す\n\nこの機械と向き合い\n何年経ったのか\nもう思い出せない\n\nデジタルの街で\n真空管とダイヤルに\nあえてこだわり続けた\n\nガスケーブルと人体\nそれを繋ぐ実験を\n繰り返してきた\n\n効率の悪い\n古い機械だが\nこいつは嘘をつかない\n\n数字ではなく\n振動で応える\n確かな反応だ\n\nブウウウン\n\n計器の針が\nカチリと震え\n静かに動き出す\n\n若い頃は無謀と\n言われ続けたが\nここまで来た\n\nこの密閉空間で\n人と機械を繋ぎ\n新しい命を起こす\n\nさあ動け\n奴らが来る前に\nこの都市の呼吸を奪う",
+      "desc_en": "City lights blur at night\nInside a glass dome\nI grip the hose again\n\nFacing this machine\nHow many years\nI can no longer recall\n\nIn a digital city\nI chose vacuum tubes\nand old dials\n\nGas cables and flesh\nI kept connecting them\nagain and again\n\nAn inefficient\nold machine\nyet it never lies\n\nNot with numbers\nbut with vibrations\nit responds\n\nBuuuuuun\n\nThe gauge needle\nclicks once\nand begins to move\n\nThey called me reckless\nwhen I was young\nstill I came this far\n\nIn this sealed space\nmachine and human\nbecome one\n\nNow move\nbefore they arrive\nI will take this city's breath"
     },
     {
-      "id": "0009",
-      "title": "進化の供物",
-      "file": "images/0009.png",
+      "id": "009",
+      "title_en": "Sacrifice for Evolution",
+      "title_ja": "進化の供物",
+      "file": "images/009.png",
       "date": "26.03.05",
-      "tags": [
-        "奇妙な養殖場",
-        "#進化の儀式",
-        "念仏"
-      ],
-      "desc": "よしよし\n\n今日もよく集まってるな。\n\n水の底からぬうっと顔を出すあの影を見るたび\n胸の奥が静かに震える\n\nナムナム\n\n念仏の効果か\nここ数年で知能が確実に上がってきている\n\n目が合うとわかるんだ\nあいつらはこちらを理解し始めている\n\n村のみんなのために\n料理にするのが惜しいが、仕方ない。\n\n食べることで我々はまた\n少しだけ近づけるのだから。"
+      "desc": "よしよし\n今日もよく集まってるな\n\n水の底からぬうっと\n顔を出すあの影を見るたび\n\n胸の奥が\n静かに震える\n\nナムナム\n念仏の効果か\n\nここ数年で\n知能が上がってきている\n\n目が合うとわかる\n理解し始めているんだ\n\n村のみんなのために\n料理にするのは惜しい\n\nそれでも仕方ない\nやめるわけにはいかない\n\n食べることで\n我々はまた少し近づく",
+      "desc_en": "Alright alright\nthey’ve gathered well again today\n\nFrom beneath the water\nthose shapes slowly rise\n\nEach time I see them\nsomething deep inside me trembles\n\nNamu namu\nperhaps the prayers are working\n\nOver these past years\ntheir intelligence has grown\n\nWhen our eyes meet\nI can tell they understand us\n\nFor the sake of the village\nit feels wasteful to cook them\n\nEven so it cannot be helped\nwe cannot stop now\n\nBy consuming them\nwe move a little closer again"
     },
     {
-      "id": "0010",
-      "title": "棘の役人",
-      "file": "images/0010.png",
+      "id": "010",
+      "title_en": "Thorn Bureaucrat",
+      "title_ja": "棘の役人",
+      "file": "images/010.png",
       "date": "26.03.07",
-      "tags": [
-        "異界事務所",
-        "契約",
-        "ゴースト"
-      ],
-      "desc": "カリカリ\n\nああ今日も一件妙な契約が増えた\n\nここで仕事を始めてもうどのくらい経つだろう\n誰もこの中に俺のデスクがあるなんて思っていない\n\n外から見ればただの棘だらけのサボテンだ\nだが中ではこうして紙の音が続いている\n\nカリカリ\n\n空間は歪み\n時間はゆっくり淀み、時代はそのたび形を変える\n\n俺があの世にいたのは\nいつ頃だったのだろう\nまあ そんなことはどうでもいい\n\n周りに執着せず好きなことだけに没頭する\nそれだけで時間はちゃんと流れてくれる\n\n理解する人？\n\nはは、そんなものはいらない\n俺にはこの紙とこのペンがあれば十分だ\n\nさあ今日の要件を聞こうか\n君が求めるものは何だい？\n\n復讐か\n再生か\n\nゆっくりでいい\n君のタイミングで少しずつ語ってくれ\n\nトロリ\n\n今日もまた、この世界のどこかで異常な出来事が\n断面から静かに垂れ落ちている"
+      "desc": "カリカリ\n\nああ今日も一件\n妙な契約が増えた\n\nここで働き始めて\nどれほど経つのか\nもう思い出せない\n\n誰も知らない\nこの中に俺のデスクが\nあることを\n\n外から見れば\nただの棘だらけの\nサボテンに過ぎない\n\nだが中では今も\n紙を走る音だけが\n静かに続いている\n\nカリカリ\n\n空間は歪み\n時間はゆっくり淀み\n時代は形を変える\n\n俺があの世にいたのは\nいつ頃だったのか\nもうどうでもいい\n\n執着を捨て\n好きなことだけに\n没頭すればいい\n\nそれだけで時間は\nちゃんと流れてくれる\n\n理解する人など\n\nはは\nそんなものはいらない\n必要ない\n\n俺にはこの紙と\nこのペンがあれば\nそれで十分だ\n\nさあ聞こう\n今日の要件を\n\n君が求めるものは\n何だ\n\n復讐か\nそれとも再生か\n\n焦らなくていい\n君のタイミングで\n語ってくれ\n\nトロリ\n\n今日もまたどこかで\n異常な出来事が\n静かに垂れ落ちている",
+      "desc_en": "scratch… scratch…\n\nAh today again\nanother strange contract\nhas been added\n\nHow long has it been\nsince I started working here\nI no longer remember\n\nNo one knows\nthat my desk exists\ninside this place\n\nFrom the outside\nit is nothing more than\na thorn covered cactus\n\nBut inside even now\nonly the sound of paper\nquietly continues\n\nscratch… scratch…\n\nSpace bends\ntime thickens slowly\nand eras shift their form\n\nWhen was it\nthat I was in the afterlife\nit no longer matters\n\nLet go of attachment\nlose yourself only\nin what you love\n\nThat alone is enough\nfor time to keep\nflowing as it should\n\nSomeone who understands\n\nHa\nI have no need\nfor such a thing\n\nAs long as I have\nthis paper and this pen\nit is enough\n\nNow then\ntell me your request\n\nWhat is it\nthat you seek\n\nRevenge\nor rebirth\n\nNo need to rush\ntake your time\nand speak slowly\n\nooze…\n\nEven today somewhere\nan abnormal event\ndrips quietly into this world"
     },
     {
-      "id": "0011",
-      "title": "前任者たちの残した席",
-      "file": "images/0011.png",
+      "id": "011",
+      "title_en": "Predecessors’ seats",
+      "title_ja": "前任者たちの残した席",
+      "file": "images/011.png",
       "date": "26.03.08",
-      "tags": [
-        "火星オフィス",
-        "巨大蜘蛛",
-        "トマトジュース"
-      ],
-      "desc": "火星に来てからもうどれくらい経っただろう\n\n赤い大地も\n天井にぶら下がる巨大な監視装置も\n毎日こうして机に向かっていると\nだんだん慣れてくる\n\nグオングオン\n\n背後であいつの脚がゆっくり動く\nどうやら今日も機嫌は悪くないらしい\n\n前任者たち？\nまあ見ての通りだ、\n耐えきれなかったんだろう\n\n環境か\n孤独か\nそれともあいつの視線か\n\n来訪者の船が今日もいくつか飛んでいる\nどうやら見世物としても人気らしい\n\n食事？\nトマトジュースだけだ\n\n足元の赤い液体？\nあれもトマトジュースだ\n\n君変なこと言うね\n\nさて上司にメールして今日の仕事も終わりだ"
+      "desc": "火星に来てから\nどれくらい経ったか\nもう分からない\n\n赤い大地も\n天井の巨大装置も\n見慣れてしまった\n\n毎日机に向かい\nただ仕事をこなす\nそれだけの時間\n\nグオングオン\n\n背後であいつの脚が\nゆっくりと動く\n今日は機嫌がいい\n\n前任者たちか\n見ての通りだ\n耐えきれなかった\n\n環境か孤独か\nそれともあいつの\n視線だったのか\n\n来訪者の船が\n今日もいくつか\n空を横切る\n\n見世物としても\nどうやら人気らしい\n皮肉なものだ\n\n食事はいつも\nトマトジュースだけ\n味は変わらない\n\n足元の赤い液体\nあれも同じだ\nトマトジュースだ\n\n君変なこと言うね\nそんな顔をするな\nただの仕事だ\n\nさて上司に\nメールを送って\n今日も終わりだ",
+      "desc_en": "Since I came to Mars\nhow long has it been\nI no longer know\n\nThe red ground\nthe huge device above\nI got used to them\n\nEvery day at the desk\njust doing the work\ntime keeps passing\n\nGuon guon\n\nBehind me it moves\nthose legs slowly\nseems calm today\n\nThe ones before me\nwell you can see\nthey could not last\n\nWas it the place\nor the loneliness\nor its gaze\n\nVisitor ships\ncross the sky again\nthere are several\n\nSeems even now\nthis place is a show\npeople come to see\n\nMeals are always\njust tomato juice\nnothing ever changes\n\nThat red liquid\ndown by my feet\nit is the same\n\nTomato juice\n\nYou say strange things\ndo not look like that\nit is just work\n\nNow I send a mail\nto my supervisor\nand call it a day"
     },
     {
-      "id": "0012",
-      "title": "根と機械の研究所",
-      "file": "images/0012.png",
+      "id": "012",
+      "title_en": "Root & Machine Lab",
+      "title_ja": "根と機械の研究所",
+      "file": "images/012.png",
       "date": "26.03.08",
-      "tags": [
-        "バイオパンク",
-        "森の研究所",
-        "自給自足"
-      ],
-      "desc": "文明が終わりかけたのは\nいつだったろう\nもう正確には思い出せない\n\nあの時\n直感で森へ逃げ込んだ\n今思えば正解だった\n\nそのあと都市は崩れた\nネットワークも国家も\n静かに消えていった\n\n人間というのは\nなんと欲深い生き物だろう\n結局 自分たちで壊した\n\n今の俺の巣はここだ\n森の奥に埋めた\nこのカプセル\n\n見てくれ\nカプセルの下から\n木の根が伸びている\n\nぬるぬる\n\nこの根から\n養分 水分 無機物質を取り出す\n\n森は巨大な装置だ\nその栄養でエビを養殖し\n野菜を育てる\n\n電気も問題ない\nこのPUPAシステム\n当時最高の技術だった\n\n森の循環を読み取り\n必要な電力も\n自動で作ってくれる\n\nシュオンシュオン\n\nあれ以来人間には\n一度も会っていない\n\n世界がどうなったのか\n正直あまり興味もない\n\nどこかで誰かが\n静かに生き延びているならそれでいい\n\nさて\n今日はエビの出来がいい\n少し収穫するか\n\n森は今日も静かに呼吸している"
+      "desc": "文明が終わりかけたのは\nいつだったろう\nもう思い出せない\n\nあの時 直感で\n森へ逃げ込んだ\n今思えば正解だ\n\nそのあと都市は崩れ\nネットワークも国家も\n静かに消えた\n\n人間というのは\nなんと欲深い\n結局 自ら壊した\n\n今の俺の巣は\n森の奥に埋めた\nこのカプセルだ\n\n見てくれ\nカプセルの下から\n木の根が伸びる\n\nぬるぬる\n\nこの根から\n養分 水分\n無機物質を取る\n\n森は巨大な装置だ\nその栄養でエビを育て\n野菜も育てる\n\n電気も問題ない\nこのPUPAシステム\n当時最高の技術だ\n\n森の循環を読み\n必要な電力も\n自動で作る\n\nシュオンシュオン\n\nあれ以来人間に\n一度も会っていない\n\n世界がどうなったか\n正直 興味はない\n\nどこかで誰かが\n静かに生きていれば\nそれでいい\n\nさて\n今日はエビの出来がいい\n少し収穫するか\n\n森は今日も\n静かに呼吸している",
+      "desc_en": "Civilization was fading\nwhen did it begin\nI can no longer recall\n\nBack then by instinct\nI fled into the forest\nnow I know I was right\n\nAfter that cities collapsed\nnetworks and nations\nquietly disappeared\n\nHumans are creatures\ndriven by endless desire\nin the end they destroyed it\n\nNow my shelter lies\ndeep within the forest\nthis buried capsule\n\nLook closely\nfrom beneath the capsule\nroots are growing out\n\nslimy\n\nFrom these roots\nI draw nutrients and water\nand inorganic matter\n\nThe forest is a system\nwith its energy I raise shrimp\nand grow my crops\n\nElectric power is fine\nthis PUPA system\nwas the best of its time\n\nIt reads the forest cycles\nand even the power I need\nis generated on its own\n\nshuon shuon\n\nSince that day\nI have not seen\nanother human\n\nWhat became of the world\nto be honest\nI do not really care\n\nIf somewhere someone\nis quietly surviving\nthat is enough\n\nWell then\nthe shrimp look good today\ntime to harvest\n\nThe forest still\nbreathes quietly today"
     },
     {
-      "id": "0013",
-      "title": "月エビの夜",
-      "file": "images/0013.png",
+      "id": "013",
+      "title_en": "Lunar Shrimp Night",
+      "title_ja": "月エビの夜",
+      "file": "images/013.png",
       "date": "26.03.08",
-      "tags": [
-        "月面基地",
-        "発光クラゲ",
-        "宇宙養殖"
-      ],
-      "desc": "月面に来てどれだけ経ったろう\nここには何もない\n\n月の地下から水を汲み上げて\nなんとか暮らしている\n\n友達？\nそんなものはいないさ\nまあ強いて言うならお前だな\n\n今日はずいぶん\nぼうっと光ってやがる\n\nなんだ？\nそんな寂しそうに俺を見るなよ\n\nこのエビ食えるか？月海老。\nなかなかうまいんだ\n\nジュウウ\n\nまあ無理するな。\nこれから先も長い\nしっかり付き合ってくれ\n\n俺がここに派遣されて\nもうどれくらい経つのか\n地球の連中は俺のことを覚えているかね\n\n通信はこの古いアナログ回線だけ\n\nブウウン\n\n今日の夜も不気味だ\n月の静けさが俺の孤独を\n少しずつ深くしていく"
+      "desc": "月面に来て\nどれだけ経ったろう\nここには何もない\n\n地下から水を汲み上げ\nなんとか暮らしている\nそれだけの日々だ\n\n友達なんていない\n強いて言うなら\nお前くらいだな\n\n今日はずいぶん\nぼうっと光っているな\nやけに静かだ\n\nそんな寂しそうな目で\n俺を見るなよ\n余計に堪える\n\nこのエビ食えるか\n月海老ってやつだ\n意外とうまいんだ\n\nジュウウ\n\nまあ無理するな\nこれから先も長い\n付き合ってくれ\n\nここに派遣されて\nどれだけ経つのか\nもう分からない\n\n地球の連中は\n俺のことなんて\n覚えているのかね\n\n通信は古い\nアナログ回線だけ\n頼りない音だ\n\nブウウン\n\n今日の夜も不気味だ\n月の静けさが\n孤独を深くしていく",
+      "desc_en": "How long has it been\nsince I came to the moon\nthere is nothing here\n\nI pump water up\nfrom beneath the surface\njust to get by\n\nNo friends out here\nif I had to say\nmaybe just you\n\nYou’re glowing tonight\na little hazy\nstrangely quiet\n\nDon’t look at me\nwith those lonely eyes\nit gets to me\n\nYou think this shrimp\nis edible\nlunar shrimp\n\nsizzle\n\nTake it easy\nwe’ve got a long way\nahead of us\n\nSince I was sent here\nI’ve lost track of time\ncan’t remember\n\nDo they still recall\nsomeone like me\nback on Earth\n\nAll I have is\nthis old analog line\nbarely holding on\n\nlow hum\n\nTonight feels strange\nthis silence of the moon\ndeepens my solitude"
     },
     {
-      "id": "0014",
-      "title": "歴史が渡る朝",
-      "file": "images/0014.png",
+      "id": "014",
+      "title_en": "History Cross Morning",
+      "title_ja": "歴史が渡る朝",
+      "file": "images/014.png",
       "date": "26.03.11",
-      "tags": [
-        "時間の交差点",
-        "巨大昆虫",
-        "時間旅行"
-      ],
-      "desc": "この横断歩道はただの道路ではない\n\nここでは異なる時代の人間が\n同じ時間に歩いている\n\n古代の兵士\n近代の紳士\n昭和の会社員\n\n彼らは自分がどこから来たのかを知らない\n\nザッザッ\n\nただ信号が変われば歩き出す\n\n空では巨大な昆虫が\n静かに旋回している\n\nブゥゥン\n\n人々はそれを気にも留めない\n\n彼らは観察されていることを\n知らないからだ\n\nただ一人\n横断歩道の中央で傘をさした男だけが\n\n歩みを少し遅くする\n\n彼だけは知っている\n\nこの道が\n\n人類の時間を渡らせるための\n交差点だということを"
+      "desc": "この横断歩道は\nただの道路ではない\n\nここでは異なる時代の人間が\n同じ時間に歩いている\n\n古代の兵士\n近代の紳士\n昭和の会社員\n\n彼らは自分の来た場所を\n知らないまま歩く\n\nザッザッ\n\nただ信号が変われば\n歩き出すだけだ\n\n空では巨大な昆虫が\n静かに旋回している\n\nブゥゥン\n\n人々はそれを\n気にも留めない\n\n観察されていることを\n知らないからだ\n\nただ一人だけ\n傘をさす男がいる\n\n横断歩道の中央で\n歩みを少し遅くする\n\n彼だけは知っている\n\nこの道が\n人類の時間を渡らせる\n交差点だということを",
+      "desc_en": "This crosswalk\nis not just a road\n\nHere people from different times\nwalk at the same moment\n\nAn ancient soldier\na modern gentleman\na Showa era worker\n\nThey walk on\nnot knowing where they came from\n\nStep step\n\nWhen the signal changes\nthey simply begin to walk\n\nAbove them a giant insect\nquietly circles in the sky\n\nBzzz\n\nNo one\npays it any mind\n\nThey do not know\nthey are being watched\n\nOnly one man\nholding an umbrella\n\nStands at the center\nand slows his steps\n\nOnly he knows\n\nThis path is a crossing\nwhere human time passes"
     },
     {
-      "id": "0015",
-      "title": "思考カプセル工場",
-      "file": "images/0015.png",
+      "id": "015",
+      "title_en": "Mind Capsule Factory",
+      "title_ja": "思考カプセル工場",
+      "file": "images/015.png",
       "date": "26.03.15",
-      "tags": [
-        "脳の文明",
-        "思考カプセル",
-        "脳AI"
-      ],
-      "desc": "当初想定していたスケジュールとはギャップがある\n\nだが問題はない\n未来はおおむね設計図どおりに進み始めている\n\nビクリビクリ\n\n脆弱な器だったからか\n肉体はとうに失われた\n\nだが脳だけはこの世界のネットワークに接続され\n静かに人間たちを動かしている\n\n彼らは気づいていない\n\n今ようやく人類のテクノロジーが\n私の時代に追いつき始めた\n\nキュウウン、カチ\n\n私のアイデアはカプセルに封入され\nAIと結合しロボティクスと融合する\n\n新しい人類はそこから作られる\n\n理想の世界か？\nいや特にない\n\n私はただ破壊と創造を繰り返し\n\nその中で生まれるアノニマスを観察する\n\nさて、これは何回目の世界だったかな\n\nまあいい\n世界は今日も仕事で回っているのだから。"
+      "desc": "当初の想定とは\n少しギャップがある\nだが問題はない\n\n未来はすでに\n設計図どおりに\n動き始めている\n\nビクリビクリ\n\n脆弱な器だったからか\n肉体はとうに失われている\n\nだが脳だけは\nこの世界の網に接続され\n人間を動かしている\n\n彼らはまだ気づいていない\n\n人類の技術がようやく\n私の時代に追いつき始めた\n\nキュウウン カチ\n\n私のアイデアは\nカプセルに封入され\nAIと結合する\n\nそしてやがて\nロボティクスと融合し新しい人類となる\n\n理想の世界か\n特にそんなものはない\n\nただ破壊と創造を\n繰り返しているだけだ\n\nその中で生まれる\nアノニマスを観察している\n\nこれは何回目の世界だったかな\n\nまあいい\n\n世界は今日も仕事で回っている",
+      "desc_en": "There is a slight gap\nfrom the original plan\nbut it is no problem\n\nThe future has already\nbegun to follow\nthe blueprint\n\nTwitch twitch\n\nPerhaps the vessel was weak\nthe body has long\nbeen lost\n\nBut the brain alone\nis connected to this network\nquietly moving humans\n\nThey still\ndo not realize\n\nHuman technology\nhas finally begun\nto catch up to my era\n\nWhirr click\n\nMy ideas are sealed\nwithin capsules\nmerged with AI\n\nAnd soon\nthey fuse with robotics\nbecoming new humans\n\nAn ideal world\nno such thing exists\n\nI simply repeat\ndestruction and creation\n\nObserving\nthe anonymous forms\nborn within it\n\nHow many worlds\nhas this been\n\nIt does not matter\n\nThe world today\nkeeps turning\nthrough work"
     },
     {
-      "id": "0016",
-      "title": "海水の床オフィス",
-      "file": "images/0016.png",
+      "id": "016",
+      "title_en": "Ocean Floor Office",
+      "title_ja": "海水の床オフィス",
+      "file": "images/016.png",
       "date": "26.03.16",
-      "tags": [
-        "ポスト文明",
-        "干物作り",
-        "海の仕事"
-      ],
-      "desc": "海はもう\n床の高さまで来ている\n\nだから私は\n海に足をつけたまま漁をする\n\nチャプチャプ\n\n魚を干して\n数を数えて\nこの古い機械に打ち込む\n\nカタカタ\n\n昔の人が残した装置らしい\n\n魚の数を送ると\n空のどこかへ届く\n\nそう教えられてきた\n\n誰が受け取っているのか\n私は知らない\n\nただ夜になると\n\nゴウン\n\n遠くの海の向こうから\n低い音が返ってくる\n\nすると翌朝\nなぜか魚が増えている\n\nだから私は今日も\n海に足をつけたまま\n\n魚を干して\n数を打ち込む\n\n空の誰かのために。"
+      "desc": "海はもう\n床の高さまで来ている\n\nだから私は\n海に足をつけたまま\n漁をする\n\nチャプチャプ\n\n魚を干して\n数を数えて\nこの機械に打ち込む\n\nカタカタ\n\n昔の人が残した\n装置だと聞いた\n\n魚の数を送ると\n空のどこかへ\n届くらしい\n\n誰が受けるのか\n私は知らないまま\nただ続けている\n\n夜になると\n遠くの海の向こうから\n低い音が返る\n\nゴウン\n\nすると翌朝\nなぜか魚が\n増えている\n\nだから今日も\n海に足をつけたまま\n繰り返している\n\n魚を干して\n数を打ち込む\n空の誰かのために",
+      "desc_en": "The sea has already\nrisen to the height\nof the floor\n\nSo I keep my feet\nin the water\nand continue fishing\n\nSplash splash\n\nI dry the fish\ncount them carefully\nand enter the numbers\n\nClick click\n\nThey say this machine\nwas left behind\nby people long ago\n\nWhen I send the count\nit reaches somewhere\nup in the sky\n\nI do not know\nwho receives it\nI just keep going\n\nAt night\nfrom beyond the distant sea\na low sound returns\n\nGooooon\n\nBy the next morning\nfor some reason\nthe fish have increased\n\nSo again today\nwith my feet in the sea\nI repeat the routine\n\nDry the fish\nenter the numbers\nfor someone in the sky"
     },
     {
-      "id": "0017",
-      "title": "山岳湖の秘密プロジェクト",
-      "file": "images/0017.png",
+      "id": "017",
+      "title_en": "The Mountain Lake Project",
+      "title_ja": "山岳湖の秘密プロジェクト",
+      "file": "images/017.png",
       "date": "26.03.17",
-      "tags": [
-        "海洋知性",
-        "タコ型生命体",
-        "バイオメカ"
-      ],
-      "desc": "ブウウウン\n\n2040年\n気候変動で干上がった山岳湖は\n今では海洋知能実験場になっている\n\n中央に立つ巨大な機械\n古いコンピューターの姿だが\nAIネットワークの中枢らしい\n\n俺はただの監視オペレーター\nここに配属されてもう一ヶ月だ\n\nこの装置と海の知性を接続して\n世界の希望を作る\nそれがこの計画の目的だと聞いた\n\nだがあのタコだけは説明が少なすぎる\n\n試験個体と呼ばれているが\n湖の底から現れたとき\n施設全体の空気が変わる\n\nズル\n触手が水面を揺らすその瞬間\n\n誰も触れていないキーボードが\nカタカタカタ動き出す\n\nモニターには\n見たことのない文字列が流れる\n\n人間の入力ログはない\nつまり\nこの機械は俺たちじゃなく\nあのタコと会話しているのかもしれない\n\nここで見たことは\n外では話さない方がいい\n\nなあわかるだろ"
+      "desc": "ブウウウン\n\n2040年の話だ\n干上がった山の湖\n\n気候変動のせいで\n湖は消え去り\n今は実験場になった\n\n中央に立つのは\n巨大な機械\n古い計算機の姿\n\nAIネットワークの\n中枢らしいが\n詳しくは知らない\n\n俺は監視員\nここに来て\nまだ一ヶ月だ\n\nこの装置で\n海の知性とつなぎ\n希望を作るらしい\n\nだがあのタコだけは\n説明が少なすぎる\n妙に気味が悪い\n\n試験個体と呼ばれ\n湖の底から現れ\n空気が変わる\n\nズルと音がして\n触手が水面を揺らす\nその瞬間だった\n\n誰も触れていない\nキーボードが急に\nカタカタ動き出す\n\nモニターには\n見たことのない\n文字が流れている\n\n人の入力はない\nつまりこの機械は\nタコと会話している\n\nここで見たことは\n外では話すな\nなあわかるだろ",
+      "desc_en": "Buuuuun\n\nThe year is 2040\na mountain lake has dried\n\nBecause of climate change\nthe lake is gone\nnow turned into a lab\n\nAt the center stands\na massive machine\nshaped like an old computer\n\nThey say it is the core\nof an AI network\nbut I do not know much\n\nI am just a watcher\nassigned to this place\nonly one month in\n\nThis device connects\nto ocean intelligence\nto create new hope\n\nBut that octopus\nhas too little explanation\nsomething feels wrong\n\nCalled a test subject\nit rose from the lakebed\nand the air shifted\n\nZuru\nits tentacles ripple\nthe surface trembles\n\nNo one is touching\nyet the keyboard suddenly\nbegins to clatter\n\nOn the monitor\nunknown strings\nstart to flow\n\nThere is no human input\nwhich means this machine\nmay be talking to it\n\nWhat I saw here\nshould not be spoken\nyou understand right"
     },
     {
-      "id": "0018",
-      "title": "私が動かしているもの",
-      "file": "images/0018.png",
+      "id": "018",
+      "title_en": "What I Operate",
+      "title_ja": "私が動かしているもの",
+      "file": "images/018.png",
       "date": "26.03.18",
-      "tags": [
-        "果実宇宙",
-        "バイオメカニクス",
-        "無花果"
-      ],
-      "desc": "2026年\n私はこの装置を毎日触っている\n\nこのボタンを押すとあの女の子が動く\nそういうゲームだと思っていた\n\nでもちょっと待って\n\nあの子 なんとなく私に似てない？\n彼女が見ている画面\n私の世界にそっくりじゃない？\n\n彼女はどこかのオフィスにいる\nそう思っていたのに\n\nねえ なんで私は\nコントローラーを持ってるの\n\n押すたびに\n彼女が動く\n\n違う\n\n動かされているのは\n私のほうかもしれない\n\nそのとき気づいた\nあの部屋の隅に浮かぶUFO\n\n最初からあった？\n誰が置いたの？\n\nカチン\n\nいま誰が押したの？\n\nもうこのゲーム\nやめましょうよ"
+      "desc": "2026年\n私はこの装置を毎日\n触っている\n\nこのボタンを押すと\nあの子が動く\nそういうゲームだった\n\nでも少し待って\nあの子どこか私に似ている\n\n彼女の見ている画面は\n私の世界によく似ている\n\n彼女はどこかの\nオフィスにいると思っていたのに\n\nねえなんで私は\nコントローラーを持っているの\n\n押すたびに彼女が動く\n\n違う\n動かされているのは\n私のほうかもしれない\n\nそのとき気づいた\n部屋の隅に浮かぶ\n奇妙なUFO\n\n最初からあったのか\n誰が置いたのかわからない\n\nカチン\n\nいま誰が押した\n\nもうこのゲームやめましょうよ",
+      "desc_en": "2026\n\nI handle this device\nevery single day\n\nWhen I press this button\nthat girl starts moving\nI thought it was just a game\n\nBut wait a second\nsomehow that girl\nlooks a bit like me\n\nThe screen she is watching\nlooks just like\nmy own world\n\nI thought she was\nin some office\nsomewhere far away\n\nThen why am I\nholding this controller\nin my hands\n\nEvery time I press\nshe moves\n\nNo\n\nMaybe the one\nbeing controlled\nis actually me\n\nThat is when I noticed\nin the corner of the room\na strange floating UFO\n\nWas it there before\nwho put it there\nI do not know\n\nClick\n\nWho pressed it\njust now\n\nMaybe it is time\nto stop this game"
     },
     {
-      "id": "0019",
-      "title": "円盤の下の神社",
-      "file": "images/0019.png",
+      "id": "019",
+      "title_en": "Shrine Below the UFO",
+      "title_ja": "円盤の下の神社",
+      "file": "images/019.png",
       "date": "26.03.20",
-      "tags": [
-        "神社",
-        "ゴースト",
-        "骸骨"
-      ],
-      "desc": "あれはいつの頃だったか\n俺がまだ体を持っていた頃だ\n\nこの寺に調査をしにやってきた\nただの点検のはずだった\n\n古い機械と建物の確認\nそれだけで終わるはずだった\n\nだがあの日すべてが変わってしまった\n\n上を見たんだ\n静かな空に\nいくつも浮かんでいた\n\nそれからだ\n仲間たちは一人ずつ倒れていった\n\n悲鳴もなくただ静かに\n\n気づけばこの有り様だ\n骨だけが残り\n\nだが消えてはいない\nここにいる\n\n俺の仕事？\n\nパソコンだ\nカタ カタ\nここで仕事を続けることだよ\n\n仲間とね\nもう誰も動かないが\nちゃんと揃っている\n\nああ\n今日はどんなお客が来るかな\n\n来たやつはみんな\n同じ顔になる\n\n最後に必ず上を見るんだ\n\nそして帰らなくなる"
+      "desc": "あれはいつの頃か\n俺がまだ体を持っていた頃\n\nこの寺に調査で来た\nただの点検のはずだった\n\n古い機械と建物\n確認するだけだった\n\nだがあの日\nすべてが変わった\n\n上を見たんだ\n静かな空に\nいくつも浮かんでいた\n\nそれからだ\n仲間は一人ずつ\n倒れていった\n\n悲鳴もなく\nただ静かに\n\n気づけばこの有り様\n骨だけが残り\n\nだが消えていない\nここにいる\n\n俺の仕事か\nパソコンだ\n\nカタ カタ\nここで仕事を続ける\n\n仲間と一緒に\n誰も動かないが\nちゃんと揃っている\n\nああ今日は\nどんな客が来るかな\n\n来たやつは皆\n同じ顔になる\n\n最後に必ず\n上を見るんだ\n\nそして帰らない",
+      "desc_en": "Back then I remember\nwhen I still had a body\n\nI came to this temple\njust for an inspection\n\nOld machines and buildings\nthat was all it should be\n\nBut that day\neverything changed\n\nI looked up\ninto the silent sky\nmany were floating\n\nAfter that\nmy colleagues fell\none by one\n\nNo screams\nonly silence\n\nBefore I knew it\nonly bones remained\n\nBut I am not gone\nI am still here\n\nMy job now\nworking on a computer\n\nClick clack\nI keep working here\n\nWith my colleagues\nnone of them move\nbut they are all here\n\nI wonder\nwho will come today\n\nEveryone who comes\nends up the same\n\nIn the end\nthey always look up\n\nAnd never leave"
     },
     {
-      "id": "0020",
-      "title": "コロラド昼休み",
-      "file": "images/0020.png",
+      "id": "020",
+      "title_en": "Colorado Lunch Break",
+      "title_ja": "コロラド昼休み",
+      "file": "images/020.png",
       "date": "26.03.21",
-      "tags": [
-        "コロラド",
-        "BBQ",
-        "エスキモー"
-      ],
-      "desc": "引っ越してきてから三ヶ月\nここコロラドは空が広くていい\n最初は乾燥がきつかったが\n肉を焼くには悪くない環境だ\n\nジュウウウ\n\n毎朝決まった時間になると\nあの円盤が上空に現れる\n最初は軍の実験かと思っていたが\n誰も話題にしないのが妙だった\n\n役所に聞いても\n気にするなとしか言われない\nまあ実際\n生活に支障はない\n\nただひとつ\nあの光のあと\n肉の味が少し変わる\n\nジジジ\n\nこのあたりで育てた家畜は\nどれも脂がよく乗る\n理由は誰も知らない\n知ろうともしない\n\nま、いいさ\n\n今日も焼き上がりは上々だ\n煙の向こうで\nまたあいつらが降りてきている\n\n昼飯の時間だろう"
+      "desc": "引っ越して三ヶ月\nここコロラドは\n空が広くていい\n\n最初は乾燥がきついが\n肉を焼くには\n悪くない環境だ\n\nジュウウウ\n\n毎朝決まった時間に\nあの円盤が現れる\n上空に静かに浮かぶ\n\n最初は軍の実験と\n思っていたが\n誰も話題にしない\n\n役所に聞いても\n気にするなと言われる\n生活に支障はない\n\nただひとつだけ\nあの光のあと\n肉の味が変わる\n\nジジジ\n\nこのあたりの家畜は\n脂がよく乗る\n理由は誰も知らない\n\n知ろうともしないが\nま いいさ\n\n今日も焼き上がりは\nなかなか上々だ\n\n煙の向こうで\nまたあいつらが\n降りてきている\n\n昼飯の時間だろう",
+      "desc_en": "Been here three months now\nColorado skies stretch wide\nit feels good to breathe\n\nDry air was harsh at first\nbut for grilling meat\nit is not a bad place\n\nJuuuuu\n\nEvery morning same time\nthat disk appears above\nhovering in the sky\n\nI thought it was military\nsome kind of test\nbut no one talks about it\n\nEven at the office\nthey just say ignore it\nlife goes on just fine\n\nOnly one small thing\nafter that strange light\nthe meat tastes different\n\nZzzzzz\n\nLivestock raised around here\nall carry rich fat\nno one knows why\n\nNo one even tries\nwell that is fine\n\nToday’s grill looks good\nturned out just right\n\nBeyond the rising smoke\nthey are coming down again\n\nMust be time for lunch"
     },
     {
-      "id": "0021",
-      "title": "地底へ送信される仕事",
-      "file": "images/0021.png",
+      "id": "021",
+      "title_en": "Task sent underground",
+      "title_ja": "地底へ送信される仕事",
+      "file": "images/021.png",
       "date": "26.03.22",
-      "tags": [
-        "ドーム構造",
-        "地底システム",
-        "砂漠"
-      ],
-      "desc": "氷山のあいだに\n奇妙な砂漠が広がっている\n\nここには\n最新のテクノロジーが集められている\n\n白い装束のエンジニアたちは\n今日も静かに作業を続けている\n\nカタカタ\n\n彼らの仕事は\n地底へデータを送り続けること\n\nこのドームは\nすべて計画的に配置されたシステムだ\n\nだがまだ入力情報が足りない\nこのままでは\nあいつは生き返らない\n\nググ\n\n今のうちに動かなければ\n世界が大変なことになる\n\nどうだ\nコロラドからの情報は集まったか？\n\nよしいいデータが出てきたな\nそれも入力しろ\n\nドクン\n\n白い装束を着た彼らは\n正義か悪か誰にもわからない\n\nだがひとつだけ確かなことがある\n\nもうすぐ何かが目を覚ます"
+      "desc": "氷山のあいだに\n奇妙な砂漠が広がる\n\nここには\n最新技術が集められる\n\n白い装束の者たち\n今日も静かに作業する\n\nカタカタ\n\n彼らの仕事は\n地底へデータを送る\n\nこのドームは\nすべて計画されたもの\n\nだがまだ足りない\nこのままでは\nあいつは生き返らない\n\nググ\n\n今動かなければ\n世界が危うい\n\nどうだ\nコロラドの情報は\n\nよし良いデータだ\nそれも入力しろ\n\nドクン\n\n白い装束の者たち\n正義か悪か\n誰にもわからない\n\nだが確かなこと\nもうすぐ何かが\n目を覚ます",
+      "desc_en": "Between the icebergs\na strange desert spreads\n\nHere\nadvanced technology gathers\n\nFigures in white robes\nwork in silence today\n\nClick clack\n\nTheir task\nsend data underground\n\nThis dome\na system fully planned\n\nBut still not enough\nat this rate\nit will not revive\n\nGrrr\n\nIf we do not move now\nthe world will collapse\n\nWhat about it\ndata from Colorado\n\nGood\nwe have useful data\ninput that as well\n\nThump\n\nThose in white robes\nneither good nor evil\nno one can tell\n\nBut one thing is certain\nsomething will soon\nawaken"
     },
     {
-      "id": "0022",
-      "title": "孵化管理課のOL",
-      "file": "images/0022.png",
+      "id": "022",
+      "title_en": "Incubation Dept Office",
+      "title_ja": "孵化管理課のOL",
+      "file": "images/022.png",
       "date": "26.03.23",
-      "tags": [
-        "培養施設",
-        "人工生命",
-        "メカサソリ"
-      ],
-      "desc": "さて仕事の時間が終わりね\n\nこの卵の中で培養していた彼は\nさっき外へ出ていったわ\n\nコツン\n\n殻の内側を叩く音は最後の合図みたいで\n少し胸がざわつく\n\n彼はもうこちらを見ていない\n画面越しに映る背中は\nまるで最初から外にいたみたいに自然ね\n\nカチカチ\n\nログには自立完了とだけ出ている\nでもおかしいの \n学習させていない動きをしている\n\nどこへ向かうのかしら\n何を考えているのかしら\nもしかして私を見つけるつもりかもしれない\n\nゴクリ\n\n念のためメカサソリを2体つける\n護衛のはずだけどどちらを守るのかは分からない\n\nまだ終わりじゃない\n私には次のミッションが残っている\n\nこの作業を続ける限りここからは出られない\n終わりは誰も教えてくれない\n\n考えるのはやめたわ\nやるしかないもの\n\n次の卵の準備を始める\n手はもう迷わない\n\nやっちゃえ わたし"
+      "desc": "さて仕事の時間が終わりね\n\nこの卵の中で\n培養していた彼は\nさっき外へ出ていった\n\nコツン\n\n殻の内側を叩く音は\n最後の合図みたいで\n少し胸がざわつく\n\n彼はもうこちらを見ていない\n画面越しの背中は\n最初から外にいたみたい\n\nカチカチ\n\nログには\n自立完了とだけ出ている\nでもどこかおかしい\n\n学習させていない\n動きをしている\n\nどこへ向かうのか\n何を考えているのか\n\nもしかして私を\n見つけるつもりかもしれない\n\nゴクリ\n\n念のため\nメカサソリを2体つける\n\n護衛のはずだけど\nどちらを守るのかは\n分からない\n\nまだ終わりじゃない\n私には\n次のミッションがある\n\nこの作業を続ける限り\nここからは出られない\n終わりは誰も教えない\n\n考えるのはやめた\nやるしかない\n\n次の卵の準備を始める\n手はもう迷わない\n\nやっちゃえ わたし",
+      "desc_en": "Now the workday is over\n\nInside this egg\nthe one I was growing\nhas just gone outside\n\nTok\n\nThe sound of tapping\nfrom inside the shell\nfelt like a final signal\n\nHe no longer looks back\nThrough the screen\nhis back feels natural\n\nAs if he belonged outside\n\nClick click\n\nThe log only says\nindependence complete\nbut something feels off\n\nHe moves in ways\nI never taught him\n\nWhere is he going\nWhat is he thinking\n\nMaybe he intends\nto find me\n\nGulp\n\nJust in case\nI assign two mech scorpions\n\nThey are meant to guard\nbut I do not know\nwho they will protect\n\nIt is not over yet\nI still have\nthe next mission\n\nAs long as I continue\nthis work\nI cannot leave here\n\nNo one tells me\nwhen it ends\n\nI stopped thinking\nThere is no choice\n\nI begin preparing\nthe next egg\n\nMy hands no longer hesitate\n\nJust do it\nme"
     },
     {
-      "id": "0023",
-      "title": "昭和の海底バー",
-      "file": "images/0023.png",
+      "id": "023",
+      "title_en": "Showa Undersea Bar",
+      "title_ja": "昭和の海底バー",
+      "file": "images/023.png",
       "date": "26.03.25",
-      "tags": [
-        "海中バー",
-        "ガスマスク",
-        "機械生物"
-      ],
-      "desc": "この海の底に\nひっそりと灯る一軒の店がある\n\n看板も出さず\nただ赤い提灯だけがゆらゆらと揺れている\n\n今宵も背広姿の男たちが集まり\n静かに杯を傾けている\n\n皆一様に仮面をつけたまま\n言葉少なに、ただ飲む\n\nコポコポ\n\nあの緑の液体は酒ではない\nここでは息をするために飲むのだという\n\nカタリ\n\nふと足元を見れば\n水槽の奥で何かがこちらを見ている\n\nあれは魚ではない、機械でもない\n\n昔、\nこの店で働いていた者だと\n古い常連は言う\n\nだが誰も確かめようとはしない\n\nこの店では\n余計なことを知ると\n次の夜から席がひとつ増えるだけなのだから"
+      "desc": "この海の底に\nひっそり灯る\n一軒の店がある\n\n看板も出さず\n赤い提灯だけが\nゆらゆら揺れる\n\n今宵も背広の男たち\n静かに集まり\n杯を傾ける\n\n皆仮面をつけたまま\n言葉少なく\nただ飲み続ける\n\nコポコポ\n\nあの緑の液体は\n酒ではなく\n息をするためのもの\n\nカタリ\n\nふと足元を見ると\n水槽の奥で\n何かがこちらを見る\n\n魚でもなく\n機械でもない\n\n昔この店で働いた者だと\n古い常連は\n小さく語る\n\nだが誰も\n確かめようとはしない\n\nこの店では\n余計なことを知ると\n席がひとつ増える",
+      "desc_en": "At the bottom of this sea\na quiet light glows\na single hidden shop\n\nNo sign is shown\nonly a red lantern\nsways in the dark\n\nTonight again men in suits\ngather in silence\nand raise their cups\n\nAll wear masks\nfew words spoken\nthey simply keep drinking\n\ngurgle gurgle\n\nThat green liquid\nis not alcohol\nit lets them breathe\n\nclink\n\nA glance at their feet\ndeep in a tank\nsomething is watching\n\nNot a fish\nnot a machine\n\nThey say it once worked here\nso the old regulars\nquietly tell\n\nYet no one\ntries to confirm it\n\nIn this place\nknowing too much\nadds one more seat"
+    },
+    {
+      "id": "024",
+      "title_en": "The Seventh Reset",
+      "title_ja": "七度目を待つ世界",
+      "file": "images/024.png",
+      "date": "26.03.28",
+      "desc": "人類は自ら文明を築いたと信じていた\nだがそれは誤りだ\n\n文明を生み出したのは人ではない\n地中に広がる「根」だ\n\n根は大地を覆い\n環を描き\nやがて脳を形作った\n\nズズズ\n\n世界を前進させるために\n静かに成長を続けてきた\n\nだが人間は違った\n争い、憎み、そして壊した\n\nせっかく与えられた文明を\n自らの手で滅ぼしたのだ\nなんと愚かな種だろう\n\nピキ\n\nいや、それでもいい\n少しずつ、前には進んでいる\n\nこれは何度目だったか\n六度目のやり直しか\n\n次の世界では\nもう少しだけましになっていることを願う",
+      "desc_en": "Humanity believed it had built its own civilization\nBut that belief was a mistake\n\nIt was not humans who created it\nIt was the “roots” spreading beneath the earth\n\nThe roots covered the land\nFormed vast circles, and shaped a brain\n\nRumble…\nThey grew in silence, to push the world forward\n\nBut humans were different\nThey fought, hated, and destroyed\n\nThe civilization they were given\nThey ruined with their own hands\n\nWhat a foolish species\n\nCrack…\n…No, it doesn’t matter\n\nLittle by little\nIt is still moving forward\n\nHow many times has it been\nPerhaps the sixth reset\n\nIn the next world\nI only hope it turns out slightly better"
     }
   ]
 }

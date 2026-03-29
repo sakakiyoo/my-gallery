@@ -2,230 +2,100 @@ const $ = (s) => document.querySelector(s);
 
 const grid = $("#grid");
 const meta = $("#meta");
+const q = $("#q");
+const tagSel = $("#tag");
+const onlyFav = $("#onlyFav");
 
 const modal = $("#modal");
 const mTitle = $("#mTitle");
 const mInfo = $("#mInfo");
 const mImg = $("#mImg");
+const mTags = $("#mTags");
 const mDesc = $("#mDesc");
 const mClose = $("#mClose");
-const mTags = $("#mTags");
+const mFav = $("#mFav");
+const mShare = $("#mShare"); // ★Xボタン
 
+// ★前へ / 次へ（HTMLに #mPrev #mNext を用意済み）
 const mPrev = $("#mPrev");
 const mNext = $("#mNext");
 
+// ★Storyトグル
 const storyToggle = $("#storyToggle");
-const storyPanel = $("#storyPanel");
-const storyLang = $("#storyLang");
-const langEn = $("#langEn");
-const langJa = $("#langJa");
+const modalBodySplit = document.querySelector(".modalBody.split");
 
+// ★BGM
 const bgm = $("#bgm");
 const bgmToggle = $("#bgmToggle");
 const bgmStatus = $("#bgmStatus");
 const BGM_KEY = "myGalleryBgmOnV1";
 
-const siteTitle = $("#siteTitle");
-const siteSub = $("#siteSub");
-const visitLabel = $("#visitLabel");
+const FAV_KEY = "myGalleryFavsV1";
+const getFavs = () => new Set(JSON.parse(localStorage.getItem(FAV_KEY) || "[]"));
+const setFavs = (set) => localStorage.setItem(FAV_KEY, JSON.stringify([...set]));
 
 let DATA = [];
 let currentItem = null;
 
+// ★Story状態
 let storyOpen = false;
-let currentLang = "en";
 
+// ★モーダル内ナビ用（フィルタ後の“表示順”で移動）
 let VISIBLE = [];
 let currentIndex = -1;
 
-const UI_TEXT = {
-  siteTitle: "Tokyo Neon Dystopia",
-  siteSub: "Cross-Section City Gallery",
-  visitLabel: "Observation Log:",
-  tapToPlay: "(tap to play)",
-  playing: "(playing)",
-  stoppedTapToResume: "(stopped: tap to resume)",
-  audioUnavailable: "(audio unavailable)",
-  story: "Story",
-  storyOn: "Story ON",
-  close: "Close",
-  metaCount: (total) => `Archive: ${total}`,
-  loadError: "Failed to load. Please check data/gallery.json."
-};
-
-function escapeHtml(str){
-  return String(str ?? "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
-}
-
-function getTitleParts(it){
-  const en = String(it?.title_en || it?.title || "").trim();
-  const ja = String(it?.title_ja || "").trim();
-  return { en, ja };
-}
-
-function getDisplayTitle(it){
-  const { en, ja } = getTitleParts(it);
-  return en || ja || "";
-}
-
-function getTitleHtml(it){
-  const { en, ja } = getTitleParts(it);
-  const parts = [];
-
-  if (en) {
-    parts.push(`<div class="titleEn">${escapeHtml(en)}</div>`);
-  }
-
-  if (ja) {
-    parts.push(`<div class="titleJa">${escapeHtml(ja)}</div>`);
-  }
-
-  if (parts.length === 0) {
-    parts.push(`<div class="title"></div>`);
-  }
-
-  return parts.join("");
-}
-
-function getDisplayInfoParts(it){
-  const rawId = String(it?.id || "").trim();
-  const normalizedId = rawId.replace(/^#/, "");
-  const idPart = normalizedId ? `#${normalizedId}` : "";
-
-  let datePart = "";
-  if (it?.date) {
-    const shortDate = String(it.date).replace(/^20/, "");
-    datePart = `Rec ${shortDate}`;
-  }
-
-  return { idPart, datePart };
-}
-
-function getDisplayInfoHtml(it){
-  const { idPart, datePart } = getDisplayInfoParts(it);
-  const parts = [];
-
-  if (idPart) {
-    parts.push(`<span>${escapeHtml(idPart)}</span>`);
-  }
-
-  if (datePart) {
-    parts.push(`<span>${escapeHtml(datePart)}</span>`);
-  }
-
-  return parts.join("");
-}
-
-function getDisplayInfoText(it){
-  const { idPart, datePart } = getDisplayInfoParts(it);
-  return [idPart, datePart].filter(Boolean).join(" ");
-}
-
-function getStoryText(it){
-  if (!it) return "";
-
-  if (currentLang === "ja") {
-    return it.desc || it.desc_ja || it.desc_en || "";
-  }
-  return it.desc_en || it.desc || it.desc_ja || "";
-}
-
-function normalizeTags(tags){
-  if (!tags) return [];
-  if (Array.isArray(tags)) return tags.filter(Boolean);
-  if (typeof tags === "string") {
-    return tags
-      .split(",")
-      .map((s) => s.trim())
-      .filter(Boolean);
-  }
-  return [];
-}
-
-function renderTags(tags){
-  if (!mTags) return;
-
-  const list = normalizeTags(tags);
-  mTags.innerHTML = "";
-
-  for (const tag of list){
-    const el = document.createElement("span");
-    el.className = "tag";
-    el.textContent = tag;
-    mTags.appendChild(el);
-  }
-}
-
-function setLang(lang){
-  currentLang = lang === "ja" ? "ja" : "en";
-
-  if (langEn){
-    langEn.classList.toggle("active", currentLang === "en");
-    langEn.setAttribute("aria-pressed", String(currentLang === "en"));
-  }
-
-  if (langJa){
-    langJa.classList.toggle("active", currentLang === "ja");
-    langJa.setAttribute("aria-pressed", String(currentLang === "ja"));
-  }
-
-  if (currentItem && mDesc){
-    mDesc.textContent = getStoryText(currentItem);
-  }
-}
-
-function updateStaticTexts(){
-  document.documentElement.lang = "en";
-
-  if (siteTitle) siteTitle.textContent = UI_TEXT.siteTitle;
-  if (siteSub) siteSub.textContent = UI_TEXT.siteSub;
-  if (visitLabel) visitLabel.textContent = UI_TEXT.visitLabel;
-  if (mClose) mClose.textContent = UI_TEXT.close;
-
-  const isOn = localStorage.getItem(BGM_KEY) === "1";
-  setBgmUi(isOn);
-  setStory(storyOpen);
+function norm(s){
+  return (s || "").toLowerCase().trim();
 }
 
 /* =========================
-   ACCESS COUNTER
+   ACCESS COUNTER（Cloudflare Worker + KV）
+   - 表示されない原因を潰した堅牢版
+   - JSONでもtextでもOK
+   - inc方式（/?inc=1）と通常GET両対応（Worker側実装差を吸収）
 ========================= */
 
+// ★あなたのWorker URL（末尾スラッシュは不要：正規化します）
 const WORKER_URL = "https://5222.kiyotake-sakaki.workers.dev";
 
 function normalizeUrl(u){
   try{
     const url = new URL(u);
+    // 末尾の / を落とす（ただしルートはそのまま）
     url.pathname = url.pathname.replace(/\/+$/, "") || "/";
+    // 末尾スラッシュ統一のため、最終的に "/"
     if (url.pathname !== "/") url.pathname = url.pathname.replace(/\/+$/, "");
-    return url.toString().replace(/\/$/, "");
+    return url.toString().replace(/\/$/, ""); // 最後に1回だけ落とす
   }catch{
     return u.replace(/\/+$/, "");
   }
 }
 
 async function readAsNumber(res){
+  // まずJSONを試す→ダメならtext
   const ct = (res.headers.get("content-type") || "").toLowerCase();
 
+  // JSONっぽい場合
   if (ct.includes("application/json") || ct.includes("text/json") || ct.includes("+json")){
     try{
       const j = await res.json();
+      // 想定キーを広く拾う
       const v = Number(
         (j && (j.value ?? j.count ?? j.visits ?? j.total ?? j.data)) ?? NaN
       );
       if (Number.isFinite(v)) return v;
+      // まれに {value:"123"} 以外の形
       const vv = Number(j);
       if (Number.isFinite(vv)) return vv;
-    }catch{}
+    }catch{
+      // 下でtextにフォールバック
+    }
   }
 
-  const tText = await res.text();
-  const m = String(tText).match(/-?\d+/);
+  // textで読む
+  const t = await res.text();
+  // "123" / "count:123" みたいなのも拾う
+  const m = String(t).match(/-?\d+/);
   if (!m) return NaN;
   return Number(m[0]);
 }
@@ -235,6 +105,10 @@ async function updateCounter(){
   if (!el) return;
 
   const base = normalizeUrl(WORKER_URL);
+
+  // Workerの作りがどっちでも動くように2段階で試す
+  // 1) /?inc=1 （増やして返す方式）
+  // 2) / （ただ返す方式）
   const candidates = [
     `${base}/?inc=1`,
     `${base}/`,
@@ -248,6 +122,7 @@ async function updateCounter(){
         const res = await fetch(url, {
           method: "GET",
           cache: "no-store",
+          // CORSで落ちる時もあるので明示（Worker側で許可が必要）
           mode: "cors",
         });
 
@@ -256,8 +131,8 @@ async function updateCounter(){
         const v = await readAsNumber(res);
         if (!Number.isFinite(v)) throw new Error("no numeric value");
 
-        el.textContent = String(v).padStart(4, "0");
-        return;
+        el.textContent = String(v).padStart(6, "0");
+        return; // 成功したら終了
       }catch(e){
         lastErr = e;
       }
@@ -277,49 +152,35 @@ async function updateCounter(){
 function setStory(open){
   storyOpen = open;
 
-  if (storyPanel){
-    storyPanel.classList.toggle("isOpen", open);
-    storyPanel.setAttribute("aria-hidden", String(!open));
-  }
+  if (!modalBodySplit) return;
 
-  if (storyToggle){
-    storyToggle.classList.toggle("on", open);
-    storyToggle.setAttribute("aria-pressed", String(open));
-    storyToggle.textContent = open ? UI_TEXT.storyOn : UI_TEXT.story;
-  }
-
-  if (storyLang){
-    storyLang.hidden = !open;
-  }
-
-  if (open && currentItem && mDesc){
-    mDesc.textContent = getStoryText(currentItem);
+  if (open){
+    modalBodySplit.classList.remove("storyHidden");
+    if (storyToggle){
+      storyToggle.classList.add("on");
+      storyToggle.setAttribute("aria-pressed", "true");
+      storyToggle.textContent = "Story ON";
+    }
+  }else{
+    modalBodySplit.classList.add("storyHidden");
+    if (storyToggle){
+      storyToggle.classList.remove("on");
+      storyToggle.setAttribute("aria-pressed", "false");
+      storyToggle.textContent = "Story";
+    }
   }
 }
 
 if (storyToggle){
-  storyToggle.addEventListener("click", (e)=>{
-    e.stopPropagation();
+  storyToggle.addEventListener("click", ()=>{
     setStory(!storyOpen);
   });
 }
 
-if (langEn){
-  langEn.addEventListener("click", (e)=>{
-    e.stopPropagation();
-    setLang("en");
-  });
-}
-
-if (langJa){
-  langJa.addEventListener("click", (e)=>{
-    e.stopPropagation();
-    setLang("ja");
-  });
-}
-
 /* =========================
-   BGM PLAYLIST
+   BGM PLAYLIST（NotSupportedError 対策版）
+   - ./audio/ に bgm01.mp3 ... bgm19.mp3 を置く想定
+   - 読めない/壊れてる/404 の曲が混ざっても自動でスキップ
 ========================= */
 
 const PLAYLIST = Array.from({ length: 30 }, (_, i) => {
@@ -341,7 +202,7 @@ function setBgmUi(isOn){
   bgmToggle.classList.toggle("on", isOn);
   bgmToggle.textContent = isOn ? "BGM: ON" : "BGM: OFF";
   bgmToggle.setAttribute("aria-pressed", String(isOn));
-  if (bgmStatus) bgmStatus.textContent = isOn ? UI_TEXT.playing : UI_TEXT.tapToPlay;
+  if (bgmStatus) bgmStatus.textContent = isOn ? "（再生中）" : "（タップで再生）";
 }
 
 function loadTrack(index){
@@ -349,6 +210,7 @@ function loadTrack(index){
 
   const src = PLAYLIST[index];
 
+  // いったんクリアして確実に再ロード
   bgm.pause();
   bgm.removeAttribute("src");
   bgm.load();
@@ -382,7 +244,10 @@ async function tryPlayCurrent(){
 
   try{
     bgm.volume = 0.6;
+
+    // 読める状態になるまで待つ（読めなければ落とす）
     await waitCanPlayOnce();
+
     await bgm.play();
     return true;
   }catch(e){
@@ -397,8 +262,10 @@ async function playBgm(){
   localStorage.setItem(BGM_KEY, "1");
   setBgmUi(true);
 
+  // src未設定なら最初をロード
   if (!bgm.src) loadTrack(currentTrackIndex);
 
+  // 再生トライ → ダメなら次へスキップ
   for (let n = 0; n < PLAYLIST.length; n++){
     const ok = await tryPlayCurrent();
     if (ok) return;
@@ -407,9 +274,10 @@ async function playBgm(){
     loadTrack(currentTrackIndex);
   }
 
+  // 全滅したらOFF
   localStorage.setItem(BGM_KEY, "0");
   setBgmUi(false);
-  if (bgmStatus) bgmStatus.textContent = UI_TEXT.audioUnavailable;
+  if (bgmStatus) bgmStatus.textContent = "（音源が再生できません）";
 }
 
 function stopBgm(){
@@ -425,11 +293,13 @@ function initBgm(){
   bgm.loop = false;
   bgm.preload = "auto";
 
+  // 固定順が良ければこの行をコメントアウト
   shuffleArray(PLAYLIST);
 
   currentTrackIndex = 0;
   loadTrack(currentTrackIndex);
 
+  // 曲が終わったら次へ
   bgm.addEventListener("ended", async ()=>{
     const isOn = localStorage.getItem(BGM_KEY) === "1";
     if (!isOn) return;
@@ -451,9 +321,10 @@ function initBgm(){
 
     localStorage.setItem(BGM_KEY, "0");
     setBgmUi(false);
-    if (bgmStatus) bgmStatus.textContent = UI_TEXT.stoppedTapToResume;
+    if (bgmStatus) bgmStatus.textContent = "（停止：タップで再開）";
   });
 
+  // デコード失敗/404等でも次へ
   bgm.addEventListener("error", async ()=>{
     const isOn = localStorage.getItem(BGM_KEY) === "1";
     if (!isOn) return;
@@ -462,6 +333,8 @@ function initBgm(){
 
     currentTrackIndex = (currentTrackIndex + 1) % PLAYLIST.length;
     loadTrack(currentTrackIndex);
+
+    // 次曲もダメなら ended 側のロジックで連鎖スキップするので、ここは1回だけ試す
     await tryPlayCurrent();
   });
 
@@ -478,18 +351,53 @@ function initBgm(){
 }
 
 /* =========================
+   TAG / FILTER
+========================= */
+
+function buildTagOptions(items){
+  if (!tagSel) return;
+  const tags = new Set();
+  items.forEach(it => (it.tags || []).forEach(t => tags.add(t)));
+  [...tags].sort((a,b)=>a.localeCompare(b,"ja")).forEach(t=>{
+    const opt = document.createElement("option");
+    opt.value = t;
+    opt.textContent = t;
+    tagSel.appendChild(opt);
+  });
+}
+
+function filterItems(items){
+  const query = norm(q?.value);
+  const tag = tagSel?.value || "";
+  const favs = getFavs();
+
+  return items.filter(it=>{
+    if (onlyFav?.checked && !favs.has(it.id)) return false;
+
+    if (tag){
+      const has = (it.tags || []).includes(tag);
+      if (!has) return false;
+    }
+
+    if (!query) return true;
+    const hay = norm(it.title) + " " + norm((it.tags || []).join(" "));
+    return hay.includes(query);
+  });
+}
+
+/* =========================
    RENDER
 ========================= */
 
 function render(){
-  if (meta) meta.textContent = UI_TEXT.metaCount(DATA.length);
+  const favs = getFavs();
+  const items = filterItems(DATA);
+
+  if (meta) meta.textContent = `表示：${items.length} / ${DATA.length} 件`;
 
   if (!grid) return;
   grid.innerHTML = "";
-
-  for (const it of DATA){
-    const displayTitle = getDisplayTitle(it);
-
+  for (const it of items){
     const card = document.createElement("article");
     card.className = "card";
     card.tabIndex = 0;
@@ -498,7 +406,7 @@ function render(){
     img.className = "thumb";
     img.loading = "lazy";
     img.src = it.file;
-    img.alt = displayTitle;
+    img.alt = it.title;
 
     const body = document.createElement("div");
     body.className = "cardBody";
@@ -506,18 +414,41 @@ function render(){
     const titleRow = document.createElement("div");
     titleRow.className = "titleRow";
 
-    const titleWrap = document.createElement("div");
-    titleWrap.className = "titleWrap";
-    titleWrap.innerHTML = getTitleHtml(it);
+    const h = document.createElement("p");
+    h.className = "title";
+    h.textContent = it.title;
 
-    titleRow.appendChild(titleWrap);
+    const favBtn = document.createElement("button");
+    favBtn.className = "fav" + (favs.has(it.id) ? " on" : "");
+    favBtn.type = "button";
+    favBtn.textContent = favs.has(it.id) ? "★" : "☆";
+    favBtn.title = "お気に入り";
+
+    favBtn.addEventListener("click", (e)=>{
+      e.stopPropagation();
+      toggleFav(it.id);
+      render();
+    });
+
+    titleRow.appendChild(h);
+    titleRow.appendChild(favBtn);
 
     const small = document.createElement("div");
-    small.className = "small meta";
-    small.innerHTML = getDisplayInfoHtml(it);
+    small.className = "small";
+    small.textContent = `${it.id} ・ ${it.date || ""}`;
+
+    const tags = document.createElement("div");
+    tags.className = "tags";
+    (it.tags || []).slice(0,4).forEach(t=>{
+      const s = document.createElement("span");
+      s.className = "tag";
+      s.textContent = t;
+      tags.appendChild(s);
+    });
 
     body.appendChild(titleRow);
     body.appendChild(small);
+    body.appendChild(tags);
 
     card.appendChild(img);
     card.appendChild(body);
@@ -525,14 +456,41 @@ function render(){
     const open = ()=>openModal(it);
     card.addEventListener("click", open);
     card.addEventListener("keydown", (e)=>{
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        open();
-      }
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); }
     });
 
     grid.appendChild(card);
   }
+}
+
+function toggleFav(id){
+  const favs = getFavs();
+  if (favs.has(id)) favs.delete(id);
+  else favs.add(id);
+  setFavs(favs);
+}
+
+/* =========================
+   SHARE X
+========================= */
+
+function openShareX(it){
+  const url = window.location.href;
+  const tags = (it.tags || [])
+    .map(t => t.replace(/\s+/g, ""))
+    .slice(0, 3)
+    .map(t => (t.startsWith("#") ? t : "#" + t))
+    .join(" ");
+
+  const text = `${it.title}\n${tags || "#TokyoNeonDystopia"}`;
+
+  const shareUrl =
+    "https://twitter.com/intent/tweet?text=" +
+    encodeURIComponent(text) +
+    "&url=" +
+    encodeURIComponent(url);
+
+  window.open(shareUrl, "_blank");
 }
 
 /* =========================
@@ -541,29 +499,28 @@ function render(){
 
 function renderModal(it){
   currentItem = it;
-  const displayTitle = getDisplayTitle(it);
+  const favs = getFavs();
 
-  if (mTitle) {
-    mTitle.className = "modalTitleWrap";
-    mTitle.innerHTML = getTitleHtml(it);
-  }
-
-  if (mInfo) {
-    mInfo.className = "mInfo meta";
-    mInfo.innerHTML = getDisplayInfoHtml(it);
-    mInfo.setAttribute("aria-label", getDisplayInfoText(it));
-  }
-
+  if (mTitle) mTitle.textContent = it.title;
+  if (mInfo) mInfo.textContent = `${it.id}${it.date ? " ・ " + it.date : ""}`;
   if (mImg){
     mImg.src = it.file;
-    mImg.alt = displayTitle;
+    mImg.alt = it.title;
   }
 
-  if (mDesc){
-    mDesc.textContent = getStoryText(it);
+  if (mTags){
+    mTags.innerHTML = "";
+    (it.tags || []).forEach(t=>{
+      const s = document.createElement("span");
+      s.className = "tag";
+      s.textContent = t;
+      mTags.appendChild(s);
+    });
   }
 
-  renderTags(it.tags);
+  if (mDesc) mDesc.textContent = it.desc || "";
+
+  if (mFav) mFav.textContent = favs.has(it.id) ? "★" : "☆";
 
   const canNav = VISIBLE.length > 1;
   if (mPrev) mPrev.disabled = !canNav;
@@ -571,39 +528,33 @@ function renderModal(it){
 }
 
 function openModal(it){
-  VISIBLE = DATA.slice();
-  currentIndex = VISIBLE.findIndex((x) => x.id === it.id);
+  VISIBLE = filterItems(DATA);
+  currentIndex = VISIBLE.findIndex(x => x.id === it.id);
 
   if (currentIndex < 0){
     currentIndex = 0;
     VISIBLE = [it];
   }
 
-  setLang("en");
-  renderModal(it);
   setStory(false);
-
-  if (modal && !modal.open) modal.showModal();
+  renderModal(it);
+  if (modal) modal.showModal();
 }
 
-function goNext(e){
-  if (e) e.stopPropagation();
+function goNext(){
   if (!VISIBLE.length) return;
   if (VISIBLE.length === 1) return;
   currentIndex = (currentIndex + 1) % VISIBLE.length;
-  setLang("en");
-  renderModal(VISIBLE[currentIndex]);
   setStory(false);
+  renderModal(VISIBLE[currentIndex]);
 }
 
-function goPrev(e){
-  if (e) e.stopPropagation();
+function goPrev(){
   if (!VISIBLE.length) return;
   if (VISIBLE.length === 1) return;
   currentIndex = (currentIndex - 1 + VISIBLE.length) % VISIBLE.length;
-  setLang("en");
-  renderModal(VISIBLE[currentIndex]);
   setStory(false);
+  renderModal(VISIBLE[currentIndex]);
 }
 
 if (mNext) mNext.addEventListener("click", goNext);
@@ -616,33 +567,46 @@ document.addEventListener("keydown", (e)=>{
 });
 
 function closeModal(){
-  if (!modal?.open) return;
-  modal.close();
+  modal?.close();
+  currentItem = null;
+  setStory(false);
+
+  VISIBLE = [];
+  currentIndex = -1;
 }
 
-mClose?.addEventListener("click", (e)=>{
-  e.stopPropagation();
-  closeModal();
-});
-
+mClose?.addEventListener("click", closeModal);
 modal?.addEventListener("click", (e)=>{
-  if (e.target === modal) {
-    closeModal();
-  }
+  const rect = modal.getBoundingClientRect();
+  const inDialog = (
+    e.clientX >= rect.left && e.clientX <= rect.right &&
+    e.clientY >= rect.top && e.clientY <= rect.bottom
+  );
+  if (!inDialog) closeModal();
 });
 
-modal?.addEventListener("close", ()=>{
-  currentItem = null;
-  setStory(false);
-  VISIBLE = [];
-  currentIndex = -1;
+modal?.addEventListener("close", ()=>setStory(false));
+modal?.addEventListener("cancel", ()=>setStory(false));
+
+mFav?.addEventListener("click", ()=>{
+  if (!currentItem) return;
+  toggleFav(currentItem.id);
+  const favs = getFavs();
+  if (mFav) mFav.textContent = favs.has(currentItem.id) ? "★" : "☆";
+  render();
 });
 
-modal?.addEventListener("cancel", ()=>{
-  currentItem = null;
-  setStory(false);
-  VISIBLE = [];
-  currentIndex = -1;
+if (mShare) {
+  mShare.addEventListener("click", ()=>{
+    if (!currentItem) return;
+    openShareX(currentItem);
+  });
+}
+
+[q, tagSel, onlyFav].filter(Boolean).forEach(el => {
+  // input / change どっちでも反応するように
+  el.addEventListener("input", render);
+  el.addEventListener("change", render);
 });
 
 /* =========================
@@ -650,20 +614,21 @@ modal?.addEventListener("cancel", ()=>{
 ========================= */
 
 async function init(){
-  updateStaticTexts();
   initBgm();
 
   const res = await fetch("./data/gallery.json", { cache: "no-store" });
   const json = await res.json();
   DATA = json.items || [];
-
+  buildTagOptions(DATA);
   render();
-  setLang("en");
+
   setStory(false);
+
+  // ★観測ログを更新（ここが動けば表示は変わる）
   updateCounter();
 }
 
-init().catch((err)=>{
-  if (meta) meta.textContent = UI_TEXT.loadError;
+init().catch(err=>{
+  if (meta) meta.textContent = "読み込みに失敗しました。data/gallery.json を確認してください。";
   console.error(err);
 });
