@@ -646,40 +646,6 @@ body::-webkit-scrollbar-corner,
     min-width: auto;
   }
 
-  .modalVisualWrap{
-    min-height: auto;
-  }
-
-  .modalImageArea{
-    min-height: auto;
-    width: 100%;
-    display: flex;
-  }
-
-  .storyPanel{
-    top: auto;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: min(46dvh, 360px);
-    transform: translateY(100%);
-    border-left: none;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    border-top-right-radius: 12px;
-    border-top-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    border-bottom-left-radius: 12px;
-  }
-
-  .storyPanel.isOpen{
-    transform: translateY(0);
-  }
-
-  .storyPanel::before{
-    display: none;
-  }
-
   .modalHead{
     margin-bottom: 12px;
   }
@@ -695,11 +661,65 @@ body::-webkit-scrollbar-corner,
     max-height: calc(94dvh - 32px);
   }
 
+  .modalVisualWrap{
+    min-height: auto;
+    display: block;
+  }
+
+  .modalImageArea{
+    position: static;
+    display: block;
+    width: 100%;
+    min-height: auto;
+    overflow: visible;
+  }
+
   #mImg{
     width: 100%;
     max-width: 100%;
     max-height: 60dvh;
     object-fit: contain;
+    margin: 0 auto;
+  }
+
+  .storyPanel{
+    position: static;
+    inset: auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+    margin-top: 12px;
+    border-left: none;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+    display: none;
+    box-shadow:
+      0 10px 24px rgba(0,0,0,.18),
+      inset 0 1px 0 rgba(255,255,255,.03);
+  }
+
+  .storyPanel.isOpen{
+    display: block;
+    transform: none;
+    opacity: 1;
+  }
+
+  .storyPanel::before{
+    display: none;
+  }
+
+  .storyPanelInner{
+    height: auto;
+    max-height: min(40dvh, 320px);
+    overflow-y: auto;
+    padding: 14px;
   }
 }
 
@@ -759,10 +779,11 @@ body::-webkit-scrollbar-corner,
   }
 
   .storyPanel{
-    height: min(48dvh, 340px);
+    margin-top: 10px;
   }
 
   .storyPanelInner{
+    max-height: min(42dvh, 300px);
     padding: 12px;
   }
 
