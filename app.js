@@ -195,7 +195,7 @@ function updateStaticTexts(){
 
   const isOn = localStorage.getItem(BGM_KEY) === "1";
   setBgmUi(isOn);
-  setStory(storyOpen, { scrollIntoView: false });
+  setStory(storyOpen);
 }
 
 /* =========================
@@ -280,24 +280,7 @@ async function updateCounter(){
    STORY TOGGLE
 ========================= */
 
-function scrollStoryIntoView(){
-  if (!storyPanel || !modal?.open) return;
-  if (!isMobileLayout()) return;
-
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      storyPanel.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-        inline: "nearest"
-      });
-    });
-  });
-}
-
-function setStory(open, options = {}){
-  const { scrollIntoView = true } = options;
-
+function setStory(open){
   storyOpen = !!open;
 
   if (storyPanel){
@@ -318,16 +301,14 @@ function setStory(open, options = {}){
   if (storyOpen && currentItem && mDesc){
     mDesc.textContent = getStoryText(currentItem);
   }
-
-  if (storyOpen && scrollIntoView){
-    scrollStoryIntoView();
-  }
 }
 
 if (storyToggle){
   storyToggle.addEventListener("click", (e)=>{
+    e.preventDefault();
     e.stopPropagation();
     setStory(!storyOpen);
+    storyToggle.blur();
   });
 }
 
@@ -608,7 +589,7 @@ function openModal(it){
 
   setLang("en");
   renderModal(it);
-  setStory(false, { scrollIntoView: false });
+  setStory(false);
 
   if (modal && !modal.open) {
     modal.showModal();
@@ -628,7 +609,7 @@ function goNext(e){
   currentIndex = (currentIndex + 1) % VISIBLE.length;
   setLang("en");
   renderModal(VISIBLE[currentIndex]);
-  setStory(false, { scrollIntoView: false });
+  setStory(false);
 }
 
 function goPrev(e){
@@ -638,7 +619,7 @@ function goPrev(e){
   currentIndex = (currentIndex - 1 + VISIBLE.length) % VISIBLE.length;
   setLang("en");
   renderModal(VISIBLE[currentIndex]);
-  setStory(false, { scrollIntoView: false });
+  setStory(false);
 }
 
 if (mNext) mNext.addEventListener("click", goNext);
@@ -652,7 +633,7 @@ document.addEventListener("keydown", (e)=>{
 
 function resetModalState(){
   currentItem = null;
-  setStory(false, { scrollIntoView: false });
+  setStory(false);
   VISIBLE = [];
   currentIndex = -1;
 }
@@ -690,7 +671,7 @@ async function init(){
 
   render();
   setLang("en");
-  setStory(false, { scrollIntoView: false });
+  setStory(false);
   updateCounter();
 }
 
