@@ -276,7 +276,7 @@ main{
     0 0 32px rgba(0,200,255,.06);
   transform: translateY(10px) scale(.985);
   opacity: 0;
-  inset: auto;
+  margin: auto;
 }
 
 #modal[open],
@@ -657,6 +657,7 @@ body::-webkit-scrollbar-corner,
     max-height: 94dvh;
     padding: 12px 16px 16px;
     margin: 2dvh auto 0;
+    inset: auto;
   }
 
   .modalBody{
@@ -791,6 +792,7 @@ body::-webkit-scrollbar-corner,
     padding: 10px 12px 12px;
     border-radius: 14px;
     margin: 1.5dvh auto 0;
+    inset: auto;
   }
 
   .modalBody{
