@@ -274,20 +274,20 @@ main{
     0 28px 80px rgba(0,0,0,.58),
     0 0 0 1px rgba(255,255,255,.03) inset,
     0 0 32px rgba(0,200,255,.06);
-  transform: translateY(10px) scale(.985);
-  opacity: 0;
+  opacity: 1;
+  transform: none;
 }
 
 #modal[open],
 .modal[open]{
-  animation: modalIn .34s cubic-bezier(.2,.8,.2,1) forwards;
+  opacity: 1;
+  transform: none;
 }
 
 #modal::backdrop,
 .modal::backdrop{
   background: rgba(0, 0, 0, 0.92);
   backdrop-filter: blur(2px);
-  animation: backdropIn .28s ease forwards;
 }
 
 .modalHead{
