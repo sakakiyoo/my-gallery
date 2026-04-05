@@ -330,7 +330,7 @@ if (langJa){
    BGM PLAYLIST
 ========================= */
 
-const PLAYLIST = Array.from({ length: 30 }, (_, i) => {
+const PLAYLIST = Array.from({ length: 50 }, (_, i) => {
   const n = String(i + 1).padStart(2, "0");
   return `./audio/bgm${n}.mp3`;
 });
