@@ -12,11 +12,6 @@
 </head>
 
 <body>
-  <!-- language toggle -->
-  <button id="langToggle" class="langToggle" type="button" aria-label="Switch language">
-    jp
-  </button>
-
   <header class="top">
     <div class="brand">
       <h1 id="siteTitle">Tokyo Neon Dystopia</h1>
@@ -24,22 +19,6 @@
     </div>
 
     <div class="controls">
-      <input
-        id="q"
-        type="search"
-        placeholder="Search (title / tags)"
-        autocomplete="off"
-      />
-
-      <select id="tag">
-        <option id="tagAllOption" value="">Tags: All</option>
-      </select>
-
-      <label class="chip">
-        <input id="onlyFav" type="checkbox" />
-        <span id="onlyFavLabel">Favorites only</span>
-      </label>
-
       <button id="bgmToggle" class="btn" type="button" aria-pressed="false">
         BGM: OFF
       </button>
@@ -60,14 +39,21 @@
   </audio>
 
   <main>
-    <div id="meta" class="meta"></div>
+    <div id="meta" class="meta">
+      <span id="metaId"></span>
+      <span id="metaDate"></span>
+    </div>
+
     <div id="grid" class="grid"></div>
   </main>
 
   <dialog id="modal" class="modal">
     <div class="modalHead">
-      <div>
-        <h2 id="mTitle"></h2>
+      <div class="modalTitleBlock">
+        <div id="mTitle" class="modalTitleWrap">
+          <div class="title-en"></div>
+          <div class="title-ja"></div>
+        </div>
         <p id="mInfo" class="mInfo"></p>
       </div>
 
@@ -84,21 +70,35 @@
           ▷
         </button>
 
-        <button id="mShare" class="btn" type="button">X</button>
-        <button id="mFav" class="btn" type="button">☆</button>
-        <button id="mClose" class="btn" type="button">Close</button>
+        <button id="mClose" class="btn" type="button" aria-label="Close modal">
+          Close
+        </button>
       </div>
     </div>
 
-    <div class="modalBody split storyHidden">
-      <div class="leftArea">
-        <img id="mImg" alt="" />
-      </div>
+    <div class="modalBody">
+      <div class="modalVisualWrap">
+        <div class="modalImageArea">
+          <img id="mImg" alt="" />
 
-      <div class="rightArea">
-        <div id="mTags" class="tags"></div>
-        <div class="storyBox">
-          <p id="mDesc"></p>
+          <aside id="storyPanel" class="storyPanel" aria-hidden="true">
+            <div class="storyPanelInner">
+              <div id="storyLang" class="storyLang">
+                <button id="langEn" class="btn langBtn active" type="button" aria-pressed="true">
+                  EN
+                </button>
+                <button id="langJa" class="btn langBtn" type="button" aria-pressed="false">
+                  JP
+                </button>
+              </div>
+
+              <div id="mTags" class="tags"></div>
+
+              <div class="storyBox">
+                <p id="mDesc"></p>
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
     </div>
