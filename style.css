@@ -987,3 +987,43 @@ body::-webkit-scrollbar-corner,
     font-size: 11px;
   }
 }
+
+
+/* =========================
+   WALLPAPER MODAL
+========================= */
+.wallpaper-thumb {
+  cursor: zoom-in;
+}
+
+.wallpaper-modal {
+  width: min(94vw, 1400px);
+  max-width: 1400px;
+  padding: 14px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  background: rgba(5, 8, 12, 0.96);
+  color: #eaeaf0;
+  box-shadow:
+    0 28px 80px rgba(0,0,0,.58),
+    0 0 32px rgba(0,200,255,.06);
+}
+
+.wallpaper-modal::backdrop {
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(2px);
+}
+
+.wallpaper-modal img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 84vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.wallpaper-modal-close {
+  margin-bottom: 10px;
+}
+

@@ -242,7 +242,7 @@ async function updateCounter(){
 
   const base = normalizeUrl(WORKER_URL);
   const candidates = [
-    `${base}/?inc=1`,
+    `${base}/?page=gallery&inc=1`,
     `${base}/`,
   ];
 
