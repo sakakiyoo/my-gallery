@@ -168,7 +168,7 @@
       "title_ja": "円盤の下の神社",
       "file": "images/019.png",
       "date": "26.03.20",
-      "desc": "あれはいつの頃か\n俺がまだ体を持っていた頃\n\nこの寺に調査で来た\nただの点検のはずだった\n\n古い機械と建物\n確認するだけだった\n\nだがあの日\nすべてが変わった\n\n上を見たんだ\n静かな空に\nいくつも浮かんでいた\n\nそれからだ\n仲間は一人ずつ\n倒れていった\n\n悲鳴もなく\nただ静かに\n\n気づけばこの有り様\n骨だけが残り\n\nだが消えていない\nここにいる\n\n俺の仕事か\nパソコンだ\n\nカタ カタ\nここで仕事を続ける\n\n仲間と一緒に\n誰も動かないが\nちゃんと揃っている\n\nああ今日は\nどんな客が来るかな\n\n来たやつは皆\n同じ顔になる\n\n最後に必ず\n上を見るんだ\n\nそして帰らない",
+      "desc": "あれはいつの頃か\n俺がまだ体を持っていた頃\n\nこの神社に調査で来た\nただの点検のはずだった\n\n古い機械と建物\n確認するだけだった\n\nだがあの日\nすべてが変わった\n\n上を見たんだ\n静かな空に\nいくつも浮かんでいた\n\nそれからだ\n仲間は一人ずつ\n倒れていった\n\n悲鳴もなく\nただ静かに\n\n気づけばこの有り様\n骨だけが残り\n\nだが消えていない\nここにいる\n\n俺の仕事か\nパソコンだ\n\nカタ カタ\nここで仕事を続ける\n\n仲間と一緒に\n誰も動かないが\nちゃんと揃っている\n\nああ今日は\nどんな客が来るかな\n\n来たやつは皆\n同じ顔になる\n\n最後に必ず\n上を見るんだ\n\nそして帰らない",
       "desc_en": "Back then I remember\nwhen I still had a body\n\nI came to this temple\njust for an inspection\n\nOld machines and buildings\nthat was all it should be\n\nBut that day\neverything changed\n\nI looked up\ninto the silent sky\nmany were floating\n\nAfter that\nmy colleagues fell\none by one\n\nNo screams\nonly silence\n\nBefore I knew it\nonly bones remained\n\nBut I am not gone\nI am still here\n\nMy job now\nworking on a computer\n\nClick clack\nI keep working here\n\nWith my colleagues\nnone of them move\nbut they are all here\n\nI wonder\nwho will come today\n\nEveryone who comes\nends up the same\n\nIn the end\nthey always look up\n\nAnd never leave"
     },
     {
@@ -494,6 +494,15 @@
       "date": "26.07.12",
       "desc": "今日から宇宙事業部に配属された\n\n最初に渡されたのは\n一冊のリーフレットだった\n\n「甲殻生物型ポッドで行く宇宙作業」\n\n昭和52年から現在まで\n一度も設計変更はありません\n\n操縦席は口の中\n\n大気圏で一度脱皮します\n\n帰還時は尻尾から\n\n前向きでは帰れません\n\n…\n\n午後から実技研修らしい\n\n私はリーフレットを閉じて\n\n甲殻生物の口へ向かった",
       "desc_en": "Today was my first day in the Space Operations Division.\n\nThe first thing they handed me\nwas a small brochure.\n\n\"Space Operations with the Crustacean Bio-Pod\"\n\nIts design has never been changed\nsince 1977.\n\nThe cockpit is inside the mouth.\n\nIt molts once\nwhile passing through the atmosphere.\n\nFor the return trip,\nit enters tail first.\n\nIt cannot come back\nfacing forward.\n\n...\n\nApparently,\npractical training starts this afternoon.\n\nI closed the brochure\n\nand walked toward the mouth\nof the crustacean."
+    },
+    {
+      "id": "056",
+      "title_en": "Lifetime Integration Program",
+      "title_ja": "終身融合制度",
+      "file": "images/056.jpg",
+      "date": "26.07.19",
+      "desc": "今日から\n生体インフラ事業部へ配属された\n\n最初は驚いた\n\n会社が昆虫だったからだ\n\nでも慣れる\n\n人間って\n\n案外すぐ慣れる\n\n池の掃除をして\n魚に餌をやって\nサーバーを点検する\n\nそれが私の仕事\n\n定年まであと二十年\n\nその頃には\n私もこの昆虫の一部になれるらしい\n\n部長は\n「羨ましいだろ」と言って笑った\n\n私も笑った",
+      "desc_en": "Today was my first day\nin the Bio-Infrastructure Division.\n\nAt first,I was surprised.\n\nThe company was a giant insect.\n\nBut you get used to it.\n\nHumans...\n\nadapt much faster than you'd think.\n\nI clean the pond.\nFeed the fish.\nInspect the servers.\n\nThat's my job.\n\nTwenty years until retirement.\n\nBy then,\n\nthey say\n\nI'll become part of this insect too.\n\nMy manager smiled.\n\"You're lucky, you know.\"\n\nI smiled too."
     }
   ]
 }
