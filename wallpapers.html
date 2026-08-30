@@ -18,10 +18,11 @@
         Free Wallpapers
       </h1>
     </div>
+
     <div class="meta" style="margin-top:10px;">
-    <span>Observation Log:</span>
-    <span id="wallpaperVisitCount">000000</span>
-  </div>
+      <span>Observation Log:</span>
+      <span id="wallpaperVisitCount">000000</span>
+    </div>
   </header>
 
   <main>
@@ -32,6 +33,8 @@
     </section>
 
     <div class="grid">
+
+      <!-- Wallpaper 001 -->
       <article class="card">
         <img
           src="./wallpapers/001.png"
@@ -52,6 +55,7 @@
         </a>
       </article>
 
+      <!-- Wallpaper 002 -->
       <article class="card">
         <img
           src="./wallpapers/002.png"
@@ -72,6 +76,7 @@
         </a>
       </article>
 
+      <!-- Wallpaper 003 -->
       <article class="card">
         <img
           src="./wallpapers/003.png"
@@ -92,7 +97,8 @@
         </a>
       </article>
 
- <article class="card">
+      <!-- Wallpaper 004 -->
+      <article class="card">
         <img
           src="./wallpapers/004.png"
           alt="Tokyo Neon Dystopia Wallpaper 004"
@@ -111,6 +117,49 @@
           </svg>
         </a>
       </article>
+
+      <!-- Wallpaper 005 -->
+      <article class="card">
+        <img
+          src="./wallpapers/005.png"
+          alt="Tokyo Neon Dystopia Wallpaper 005"
+          class="wallpaper-thumb"
+          data-full="./wallpapers/005.png"
+        />
+
+        <div class="meta" style="margin-top:8px;">
+          <span>Wallpaper 005</span>
+          <span>1920 × 1080</span>
+        </div>
+
+        <a class="btn" href="./wallpapers/005.png" download aria-label="Download Wallpaper 005">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.4l3.3 3.3V4a1 1 0 0 1 1-1ZM5 19a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"/>
+          </svg>
+        </a>
+      </article>
+
+      <!-- Wallpaper 006 -->
+      <article class="card">
+        <img
+          src="./wallpapers/006.png"
+          alt="Tokyo Neon Dystopia Wallpaper 006"
+          class="wallpaper-thumb"
+          data-full="./wallpapers/006.png"
+        />
+
+        <div class="meta" style="margin-top:8px;">
+          <span>Wallpaper 006</span>
+          <span>1920 × 1080</span>
+        </div>
+
+        <a class="btn" href="./wallpapers/006.png" download aria-label="Download Wallpaper 006">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.4l3.3 3.3V4a1 1 0 0 1 1-1ZM5 19a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"/>
+          </svg>
+        </a>
+      </article>
+
     </div>
   </main>
 
@@ -123,52 +172,55 @@
   </dialog>
 
   <script>
-  const wallpaperModal = document.getElementById("wallpaperModal");
-  const wallpaperModalImg = document.getElementById("wallpaperModalImg");
-  const wallpaperModalClose = document.getElementById("wallpaperModalClose");
+    const wallpaperModal = document.getElementById("wallpaperModal");
+    const wallpaperModalImg = document.getElementById("wallpaperModalImg");
+    const wallpaperModalClose = document.getElementById("wallpaperModalClose");
 
-  document.querySelectorAll(".wallpaper-thumb").forEach((img) => {
-    img.addEventListener("click", () => {
-      wallpaperModalImg.src = img.dataset.full;
-      wallpaperModalImg.alt = img.alt;
-      wallpaperModal.showModal();
-    });
-  });
-
-  wallpaperModalClose.addEventListener("click", () => {
-    wallpaperModal.close();
-  });
-
-  wallpaperModal.addEventListener("click", (event) => {
-    if (event.target === wallpaperModal) {
-      wallpaperModal.close();
-    }
-  });
-
-  async function updateWallpaperCounter() {
-    const el = document.getElementById("wallpaperVisitCount");
-    if (!el) return;
-
-    try {
-      const res = await fetch("https://5222.kiyotake-sakaki.workers.dev/?page=wallpapers&inc=1", {
-        method: "GET",
-        cache: "no-store",
-        mode: "cors"
+    document.querySelectorAll(".wallpaper-thumb").forEach((img) => {
+      img.addEventListener("click", () => {
+        wallpaperModalImg.src = img.dataset.full;
+        wallpaperModalImg.alt = img.alt;
+        wallpaperModal.showModal();
       });
+    });
 
-      const json = await res.json();
-      const value = Number(json.value);
+    wallpaperModalClose.addEventListener("click", () => {
+      wallpaperModal.close();
+    });
 
-      if (Number.isFinite(value)) {
-        el.textContent = String(value).padStart(4, "0");
+    wallpaperModal.addEventListener("click", (event) => {
+      if (event.target === wallpaperModal) {
+        wallpaperModal.close();
       }
-    } catch (e) {
-      el.textContent = "------";
-      console.warn("updateWallpaperCounter failed:", e);
-    }
-  }
+    });
 
-  updateWallpaperCounter();
-</script>
+    async function updateWallpaperCounter() {
+      const el = document.getElementById("wallpaperVisitCount");
+      if (!el) return;
+
+      try {
+        const res = await fetch(
+          "https://5222.kiyotake-sakaki.workers.dev/?page=wallpapers&inc=1",
+          {
+            method: "GET",
+            cache: "no-store",
+            mode: "cors"
+          }
+        );
+
+        const json = await res.json();
+        const value = Number(json.value);
+
+        if (Number.isFinite(value)) {
+          el.textContent = String(value).padStart(4, "0");
+        }
+      } catch (e) {
+        el.textContent = "------";
+        console.warn("updateWallpaperCounter failed:", e);
+      }
+    }
+
+    updateWallpaperCounter();
+  </script>
 </body>
 </html>
