@@ -783,7 +783,7 @@ function render(){
 
     img.className = "thumb";
     img.loading = "lazy";
-    img.src = it.file;
+    img.src = it.thumb || it.file;
     img.alt = displayTitle;
 
     const body =
