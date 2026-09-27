@@ -632,13 +632,13 @@ function initBgm(){
   ) return;
 
   bgm.loop = false;
-  bgm.preload = "auto";
+
+  // BGMがOFFの間はMP3を読み込まない
+  bgm.preload = "none";
 
   shuffleArray(PLAYLIST);
 
   currentTrackIndex = 0;
-
-  loadTrack(currentTrackIndex);
 
   bgm.addEventListener(
     "ended",
