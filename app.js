@@ -1078,12 +1078,7 @@ async function init(){
   initBgm();
 
   const res =
-    await fetch(
-      "./data/gallery.json",
-      {
-        cache: "no-store"
-      }
-    );
+  await fetch("./data/gallery.json");
 
   const json =
     await res.json();
