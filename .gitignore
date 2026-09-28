@@ -2,3 +2,5 @@
 *.safetensors
 *.safetensors
 *.safetensors
+images/images_4K/
+.DS_Store
