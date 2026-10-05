@@ -817,8 +817,28 @@
       "file": "images/082.png",
       "thumb": "thumbs/082.webp",
       "date": "26.10.5",
-      "desc": "森へ虫を採りに行く\n\n幼虫でも昆虫でも構わない\n\n捕まえた虫を大鍋でじっくり煮る\n\nグツグツ\n\nと真っ黒な墨が出てくる\n\nその墨を鉄鍋へ移して\n水分がなくなるまで煎る\n\nあとは小さく丸めれば完成\n\n毎年冬になると\n私はこうして黒い錠剤を作る\n\n何の薬かって？\n\n知らないアル\n...\n\nゴウン\n\nお今日も客が来たアル\n\nあいつら\n毎年来るから\n\n効いてるんじゃないか？",
+      "desc": "森へ虫を採りに行く\n\n幼虫でも昆虫でも構わない\n\n捕まえた虫を大鍋でじっくり煮る\n\nグツグツ\n\nと真っ黒な墨が出てくる\n\nその墨を鉄鍋へ移して\n水分がなくなるまで煎る\n\nあとは小さく丸めれば完成\n\n毎年冬になると\n私はこうして黒い錠剤を作る\n\n何の薬かって？\n\n知らないアル\n...\n\nゴウン\n\nお今日も客が来たアル\n\nあいつら\n毎年来るから\n\n効いてるんじゃないか",
       "desc_en": "I head into the forest to gather bugs.\n\nLarvae, insects—anything will do.\n\nI toss whatever I catch into a big pot and let it simmer.\n\nBubble, bubble.\n\nSoon, thick black ink starts to seep out.\n\nI pour the ink into an iron pan\nand roast it until all the moisture is gone.\n\nThen I roll it into little pills.\n\nEvery winter,\nthis is how I make my black pills.\n\nWhat kind of medicine is it?\n\nI don't know, aru.\n\n...\n\nVrrrrmmm...\n\nOh.Another customer today, aru.\n\nThey come back every year.\n\nSo I guess it must be working, right?"
+    },
+    {
+      "id": "083",
+      "title_en": "Medicine Man",
+      "title_ja": "メディソンマン",
+      "file": "images/083.png",
+      "thumb": "thumbs/083.webp",
+      "date": "26.10.6",
+      "desc": "おれはメディソンマン\n\n市街地第3地区にある薬局の店長だ  \n\nきみ\n顔色が悪いね  \n\n最近仕事がつらい？  \n\nこれ飲むか？\n\n一錠飲めばあと20年は働ける  \n\n疲れない\n悩まない\n上司にも腹が立たない  \n\nただし...\n\n個性はなくなる\n\n...\n\nそんな顔するなよ  \n\nおれも飲んでる  \n\nほら  \n顔色いいだろ",
+      "desc_en": "I'm the Medicine Man.  \n\nI run a pharmacy in the city's Third District.  \n\nHey,\nyou don't look so good.  \n\nWork been rough lately?  \n\nWant one of these?  \n\nTake one pill,and you'll be able to work for another twenty years.  \n\nNo fatigue.\nNo worries.\nNo getting mad at your boss.  \n\nBut...\n\nyou'll lose your individuality.  \n\n...  \n\nDon't look at me like that.  \n\nI take them too.  \n\nSee?\nI look healthy, don't I?"
+    },
+    {
+      "id": "084",
+      "title_en": "Offshore Radio Measurement",
+      "title_ja": "海上電波測定",
+      "file": "images/084.png",
+      "thumb": "thumbs/084.webp",
+      "date": "26.10.6",
+      "desc": "電波測定のため\n三日前にCITYからここへ出張してきた\n\n仕事といっても\nやることはほとんどない\n\nここでは魚がよく釣れる\n\n煮て焼いて\n酒を飲みながら測定する\n\nああ\n\n勤務中のUFOが\nゆっくりこちらへ近づいてきた\n\nどうだい\nお前も一緒に魚食ってくかい\n\n...\n\nDestroy\n\n...\n\nですって",
+      "desc_en": "I came here from CITY three days ago\nto measure radio signals\n\nThere’s not much to do as far as work goes\n\nThe fish bite well around here\n\nWe boil them grill them\nand take measurements over a few drinks\n\nAh\n\nA UFO on duty\nis slowly coming this way\n\nHey\nwanna come have some fish with us?\n\n...\n\nDestroy\n\n...\n\nHe says."
     }
   ]
 }
