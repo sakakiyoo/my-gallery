@@ -897,8 +897,18 @@
       "file": "images/090.png",
       "thumb": "thumbs/090.webp",
       "date": "26.10.14",
-      "desc": "おい\nそいつをこっちに運んできてくれ\n\nああ\n中はだいぶ成熟してきているぞ\n\nいいぞ\n\n今日は何個だ？\n\n百二十七\n\n昨日より多いな\n\nああ\n最近は空の連中もよく食うからな\n\n……\n\nおい\n一個開きかけてるぞ\n\n見るな\n\nまだ早い",
+      "desc": "おい\nそいつをこっちに運んできてくれ\n\nああ\n中はだいぶ成熟してきているぞ\n\nいいぞ\n\n今日は何個だ？\n\n127\n\n昨日より多いな\n\nああ\n最近は空の連中もよく食うからな\n\n……\n\nおい\n一個開きかけてるぞ\n\n見るな\n\nまだ早い",
       "desc_en": "Hey\nbring that one over here\n\nYeah\nthe inside's getting pretty mature now\n\nGood\n\nHow many today?\n\n127\n\nMore than yesterday\n\nYeah\nthose guys up in the sky have been eating a lot lately\n\n……\n\nHey\none of them's starting to open\n\nDon't look\n\nIt's not time yet"
+    },
+    {
+      "id": "091",
+      "title_en": "Interdimensional Crosswalk",
+      "title_ja": "次元横断歩道",
+      "file": "images/091.png",
+      "thumb": "thumbs/091.webp",
+      "date": "26.10.15",
+      "desc": "次元を移動するとき\n\n必ずこの横断歩道を渡る\n\nここでは色々な人とすれ違う\n\nどこの次元から来たのか\nわからない奴もいる\n\n会話はできない\n\n声を出しても届かないのだ\n\n目が合ってしまった\n\nなんだか見覚えのある顔だ\n\n……\n\nあ\n\n俺だ\n\nずいぶん老けたな",
+      "desc_en": "Whenever we travel between dimensions\n\nWe must cross this crosswalk\n\nAll kinds of people pass each other here\n\nSome of them\nI have no idea which dimension they came from\n\nWe can't have conversations\n\nEven if we speak\n\nour voices never reach each other\n\nOur eyes met That face looks strangely familiar\n\n……\n\nOh\n\nThat's me\n\nI've gotten pretty old"
     }
   ]
 }
