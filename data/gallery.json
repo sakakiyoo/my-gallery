@@ -857,7 +857,7 @@
       "file": "images/086.png",
       "thumb": "thumbs/086.webp",
       "date": "26.10.8",
-      "desc": "地球で役目を終えた魂は\nみんなこの星へ帰ってくる  \n\n長いこと人間をやっとると\nいろんなものがこびりつく  \n\n怒り\n欲\n嫉妬  \n\nそれを一度きれいに\n取り除いてやるんじゃ  \n\n剥がれ落ちたものは邪鬼になる  \n\nなぜか\n魚の形になることが多いが  \n\nわしの仕事は\nそれを調理して食べること  \n\nクセもあるし\n苦みもあるが  \n\n少しくらい汚れていた方が  \n人間の場合はうまい",
+      "desc": "地球で役目を終えた魂は\nみんなこの星へ帰ってくる  \n\n長いこと人間をやっとると\nいろんなものがこびりつく  \n\n怒り\n欲\n嫉妬  \n\nそれを一度きれいに\n取り除いてやるんじゃ  \n\n剥がれ落ちたものは邪鬼になる  \n\nなぜか\n魚の形になることが多いが  \n\nわしの仕事は\nそれを調理して食べること  \n\nクセもあるし\n苦みもあるが  \n\n少しくらい汚れていた方が  \n美味いのだ",
       "desc_en": "Souls that have finished their time on Earth\nall return to this planet  \n\nWhen you've been human for a long time\nall sorts of things start clinging to you  \n\nAnger\nDesire\nJealousy  \n\nSo I clean them off\nand remove them from the soul  \n\nWhat falls away becomes Jaki  \n\nFor some reason\nthey often take the shape of fish  \n\nMy job is\nto cook them and eat them  \n\nThey have a peculiar taste\nand a certain bitterness  \n\nBut when it comes to humans\na little impurity makes them taste better"
     },
     {
@@ -919,6 +919,26 @@
       "date": "26.10.16",
       "desc": "ゴボゴボ\n\n朝一番のジュースはうまい\n\nこれは質量分析計\n\n君がどんな成分でできているかを\n測る装置なのさ\n\n今日も君から採った赤い成分を測定する\n\nウィーン\nカタカタ\n\nほら\n炭素\n水素\n酸素\n嫉妬\n後悔\n\n……\n\nおや\n昨日より希望が減っているな\n\nまあ\n\n人間なんて\nだいたい水と後悔でできているのだ",
       "desc_en": "Gurgle, gurgle\n\nNothing beats a glass of juice first thing in the morning\n\nThis is a mass spectrometer\n\nIt's a machine that tells us\nwhat you're made of\n\nToday, I'll analyze the red substance I collected from you again\n\nWhirrr\nClack clack\n\nSee?\nCarbon\nHydrogen\nOxygen\nJealousy\nRegret\n\n...\n\nOh?\nYour hope levels are lower than yesterday\n\nWell\n\nHumans are, after all,\nmostly made of water and regret"
+    },
+    {
+      "id": "093",
+      "title_en": "Tuna, You Know the Deal",
+      "title_ja": "ツナわかるよな",
+      "file": "images/093.png",
+      "thumb": "thumbs/093.webp",
+      "date": "26.10.19",
+      "desc": "地上に住めなくなって\nもう何年になるんだろうな\n\n海底生活にもすっかり慣れたが\n食事だけはどうにも飽きてきた\n\n毎日サバ、イワシ、ツナ\nたまに海底虫\n\nレシピを変えたところで\n結局いつも同じ味だ\n\nしかし\nよく考えたら妙な話だよな\n\n海底に会社まで作って\n地上はフィジカルAIが洗浄してくれている\n\n俺たちは毎日ここで仕事して\n飯食って\n寝て\n\n本当に地上へ戻れる日なんて来るのかね\n\n……\n\nまあ\nこういう時はラップだな\n\nツナ\nわかるよな\n\n油少なめ\n舌平目\n\nサバサバすんなよ\nまだまだ海底\n\n上がれぬ地上に\n届けよ低音\n\nウンズッタッタ\nウンウンズ\n\n油少なめ\n舌平目",
+      "desc_en": "How many years has it been\nsince we could no longer live on the surface?\n\nI've gotten used to life under the sea\nbut the food is getting pretty old\n\nMackerel, sardines, tuna every day\nthe occasional deep-sea bug\n\nNo matter how we change the recipes\nit all ends up tasting the same\n\nBut\nwhen you think about it, it's pretty strange\n\nWe've even built companies under the sea\nwhile Physical AI cleans up the surface for us\n\nWe work here every day\neat\nand sleep\n\nWill we ever really get to return to the surface?\n\n……\n\nWell\ntimes like these call for a little rap\n\nTuna\nyou know the deal, don't ya?\n\nGo easy on the oil\nbring on the sole\n\nDon't get all mackerel-moody\nwe're still down in the deep\n\nTo the surface we can't reach\nlet the bass go deep\n\nOom-zut-ta-ta\nOom-oom-z\n\nGo easy on the oil\nbring on the sole"
+    },
+    {
+      "id": "094",
+      "title_en": "Since Becoming Human",
+      "title_ja": "いつから人間",
+      "file": "images/094.png",
+      "thumb": "thumbs/094.webp",
+      "date": "26.10.20",
+      "desc": "いらっしゃいませ\n\nあら\n\n最近ロボット殿がまた増えてきましたね\n最初はどうなるかと思ったけど\n\n母がいた時から比べて\n随分この辺りも様変わりしたわ\n\n昔は人間のお客さんばかりだったのよ\n今じゃ半分以上が機械のお客さん\n\n最初の頃は大変だったわ\n\n油を出せだの\n電気を飲ませろだの\n\n寿司屋なのにねえ\n\nでも最近のロボット殿は\n人間と同じものを食べるのよ\n\n味までわかるんですって\n\n便利な時代になったものね\n\nあら\n\nお客さん\nおかわりですか？\n\nはいはい\nいつものですね\n\nところで\n\nお客さんは\nいつから人間になられたんです？\n\nあら\nそうでしたか\n\nもう三十年も前になるんですね\n昔は立派な鉄の頭をしてらしたのに\n\n……\n\nそういえば私も最近\n\n母に似てきたって言われるんですよ\n\nふふ",
+      "desc_en": "Welcome\n\nOh my\n\nWe've been seeing more robot gentlemen around here lately\nAt first I wasn't sure how things would turn out\n\nBut compared to when my mother was around\nThis neighborhood has changed so much\n\nBack then almost all our customers were human\nNowadays more than half of them are machines\n\nIt was quite a struggle in the beginning\n\nSome demanded oil\nOthers wanted electricity to drink\n\nAnd this is a sushi restaurant\n\nBut these days robot gentlemen\nEat the same food as humans\n\nThey can even taste it, apparently\n\nWhat a convenient age we live in\n\nOh\n\nWould you like another serving?\n\nOf course\nThe usual, then\n\nBy the way\n\nWhen did you become human?\n\nOh\nI see\n\nSo it's been thirty years already\nYou used to have such a fine iron head\n\n...\n\nCome to think of it, lately\n\nPeople have been telling me I'm starting to look more like my mother\n\nHehe"
     }
   ]
 }
