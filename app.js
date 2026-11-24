@@ -42,8 +42,8 @@ let currentIndex = -1;
 
 const UI_TEXT = {
   siteTitle: "Tokyo Neon Dystopia",
-  siteSub: "Cross-Section City Gallery",
-  visitLabel: "Observation Log:",
+  siteSub: "Field Log",
+  visitLabel: "Access Counter:",
   tapToPlay: "(tap to play)",
   playing: "(playing)",
   stoppedTapToResume: "(stopped: tap to resume)",
