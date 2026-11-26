@@ -43,7 +43,7 @@ let currentIndex = -1;
 const UI_TEXT = {
   siteTitle: "Tokyo Neon Dystopia",
   siteSub: "Field Log",
-  visitLabel: "Access Counter:",
+  visitLabel: "Access:",
   tapToPlay: "(tap to play)",
   playing: "(playing)",
   stoppedTapToResume: "(stopped: tap to resume)",
@@ -821,11 +821,17 @@ function render(){
         "div"
       );
 
-    small.className =
-      "small meta";
+small.className =
+  "small meta";
 
-    small.innerHTML =
-      getDisplayInfoHtml(it);
+small.style.flexDirection = "column";
+small.style.alignItems = "flex-start";
+small.style.gap = "3px";
+
+    small.innerHTML = `
+  ${it.location ? `<div style="color:#00C8FF;"> ${escapeHtml(it.location)}</div>` : ""}
+  <div>${escapeHtml(getDisplayInfoParts(it).datePart)}</div>
+`;
 
     body.appendChild(titleRow);
     body.appendChild(small);

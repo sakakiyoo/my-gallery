@@ -202,6 +202,7 @@ def main() -> int:
         )
 
         date = get_cell(r, idx, "date")
+        location = clean_text(get_cell(r, idx, "location"))
 
         # -------------------------
         # Story
@@ -238,6 +239,7 @@ def main() -> int:
                 if thumb_path
                 else file_path,
 
+            "location": location,
             "date": normalize_date(date),
 
             "desc": desc_ja,
